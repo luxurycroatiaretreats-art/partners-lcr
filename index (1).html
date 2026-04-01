@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners – Luxury Croatia Retreats</title>
+<meta name="description" content="Luxury Croatia Retreats partnerski program za vlasnike luksuznih vila. Direktne rezervacije bez provizije.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal: #115571;
+    --teal-dark: #0D3F55;
+    --teal-light: #1A6E8F;
+    --teal-pale: #E8F2F6;
+    --white: #FFFFFF;
+    --cream: #F8F6F2;
+    --sand: #F2EDE4;
+    --text: #1A2A2C;
+    --text-light: #4A6468;
+    --border: #D4E6E8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  .navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 56px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .navbar.scrolled { border-bottom-color: var(--border); }
+  .logo-nav {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: var(--teal);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .lang-toggle {
+    display: flex;
+    gap: 4px;
+    background: var(--teal-pale);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 4px;
+  }
+  .lang-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .lang-btn.active {
+    background: var(--teal);
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 50%; bottom: 0;
+    background: linear-gradient(135deg, var(--teal-pale) 0%, var(--cream) 100%);
+    z-index: 0;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 64px 80px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--teal);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 4.5vw, 68px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--teal); }
+  .hero-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+    max-width: 420px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s forwards;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s forwards;
+  }
+  .btn-primary {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--teal);
+    color: var(--white);
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+  .btn-ghost {
+    display: inline-block;
+    padding: 16px 40px;
+    background: transparent;
+    color: var(--teal);
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid var(--teal);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { background: var(--teal); color: var(--white); }
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--cream) 0%, transparent 20%);
+    z-index: 1;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 1.2s 0.3s forwards;
+  }
+
+  /* STATS */
+  .stats-bar {
+    background: var(--teal);
+    padding: 40px 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .stat-item { text-align: center; }
+  .stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-top: 6px;
+    display: block;
+  }
+
+  /* SHARED */
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::before { content: ''; width: 24px; height: 1px; background: var(--teal); }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--teal); }
+
+  /* WHY */
+  .why-section { background: var(--cream); }
+  .why-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 64px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .why-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+    margin-bottom: 36px;
+  }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .why-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 28px 24px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .why-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--teal);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  .why-card:hover { box-shadow: 0 8px 32px rgba(42,107,114,0.12); transform: translateY(-4px); }
+  .why-card:hover::after { transform: scaleX(1); }
+  .why-icon {
+    width: 40px; height: 40px;
+    background: var(--teal-pale);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .why-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .why-card-text { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.7; }
+
+  /* HOW IT WORKS */
+  .steps-section { background: var(--teal); }
+  .steps-inner { max-width: 1200px; margin: 0 auto; padding: 80px 64px; }
+  .steps-header { margin-bottom: 56px; }
+  .steps-header .section-label { color: rgba(255,255,255,0.6); }
+  .steps-header .section-label::before { background: rgba(255,255,255,0.6); }
+  .steps-header .section-title { color: var(--white); }
+  .steps-header .section-title em { color: rgba(255,255,255,0.7); }
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .step-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 40px 32px;
+    transition: background 0.3s;
+  }
+  .step-card:hover { background: rgba(255,255,255,0.14); }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.2);
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .step-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--white); margin-bottom: 12px; }
+  .step-text { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.8; }
+
+  /* PRICING */
+  .pricing-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .pricing-desc { font-size: 15px; font-weight: 300; color: var(--text-light); line-height: 1.9; margin-bottom: 32px; }
+  .pricing-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--teal), var(--teal-light));
+  }
+  .price-badge {
+    display: inline-block;
+    background: var(--teal-pale);
+    color: var(--teal);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    font-weight: 300;
+    color: var(--teal);
+    line-height: 1;
+    display: block;
+  }
+  .price-period { font-size: 14px; color: var(--text-light); margin-bottom: 32px; display: block; margin-top: 4px; }
+  .price-features { list-style: none; margin-bottom: 40px; }
+  .price-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .price-features li:last-child { border-bottom: none; }
+  .price-features li::before { content: '✓'; color: var(--teal); font-size: 13px; font-weight: 500; flex-shrink: 0; }
+
+  /* TESTIMONIAL */
+  .testimonial-section { background: var(--teal-pale); }
+  .testimonial-inner { max-width: 800px; margin: 0 auto; padding: 80px 64px; text-align: center; }
+  .quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 100px;
+    color: var(--teal);
+    opacity: 0.25;
+    line-height: 0.7;
+    margin-bottom: 24px;
+  }
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+  .quote-author { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--teal); }
+
+  /* CTA */
+  .cta-section {
+    background: var(--text);
+    padding: 96px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(42,107,114,0.2) 0%, transparent 70%);
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cta-title em { font-style: italic; color: var(--teal-light); }
+  .cta-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.55); margin-bottom: 48px; position: relative; }
+
+  /* FOOTER */
+  footer {
+    background: var(--white);
+    padding: 40px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.3em; color: var(--teal); text-transform: uppercase; }
+  .footer-copy { font-size: 12px; color: var(--text-light); font-weight: 300; }
+  .footer-link { font-size: 12px; color: var(--teal); text-decoration: none; letter-spacing: 0.1em; transition: opacity 0.3s; }
+  .footer-link:hover { opacity: 0.7; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.9; }
+  }
+
+  /* LANG */
+  [data-lang="en"] { display: none; }
+  body.en [data-lang="en"] { display: block; }
+  body.en [data-lang="hr"] { display: none; }
+  span[data-lang="en"] { display: none; }
+  body.en span[data-lang="en"] { display: inline; }
+  body.en span[data-lang="hr"] { display: none; }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 100px 28px 60px; }
+    .stats-bar { padding: 32px 28px; flex-wrap: wrap; gap: 24px; }
+    .stat-divider { display: none; }
+    .why-inner, .pricing-inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 28px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .steps-inner { padding: 64px 28px; }
+    .navbar { padding: 16px 24px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 28px; }
+    .cta-section { padding: 64px 28px; }
+    .testimonial-inner { padding: 64px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="https://luxurycroatiaretreats.com" class="logo-nav">LCR · Partners</a>
+  <div style="display:flex; align-items:center; gap:24px;">
+    <a href="https://newaveadagency.github.io/lcr_moments/" class="footer-link" target="_blank" style="font-size:12px; letter-spacing:0.1em; display:flex; align-items:center; gap:6px;">
+      ✦ <span style="color:var(--teal); font-weight:500;">LCR Moments</span>
+    </a>
+    <a href="https://www.instagram.com/luxurycroatiaretreats/" class="footer-link" target="_blank" title="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@luxurycroatiaretreats" class="footer-link" target="_blank" title="TikTok">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg>
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('hr')">HR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">
+      <span data-lang="hr">Luxury Croatia Retreats · Partnerski program</span>
+      <span data-lang="en">Luxury Croatia Retreats · Partner Program</span>
+    </p>
+    <h1 class="hero-title">
+      <span data-lang="hr">Luksuz<br><em>bez provizije.</em><br>Vaša priča,<br>vaša zarada.</span>
+      <span data-lang="en">Luxury<br><em>without commission.</em><br>Your story,<br>your revenue.</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-lang="hr">Platforma koja direktno spaja vlasnike luksuznih vila s gostima koji ih traže — bez posrednika, bez skrivenih troškova.</span>
+      <span data-lang="en">A platform that directly connects luxury villa owners with guests who seek them — no intermediaries, no hidden fees.</span>
+    </p>
+    <div class="hero-cta">
+      <a href="https://form.typeform.com/to/VfTTIk3X" class="btn-primary">
+        <span data-lang="hr">Postani partner</span>
+        <span data-lang="en">Become a partner</span>
+      </a>
+      <a href="https://luxurycroatiaretreats.com" class="btn-ghost">
+        <span data-lang="hr">Posjeti LCR</span>
+        <span data-lang="en">Visit LCR</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=900&q=80" alt="Luxury Croatia Villa">
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">200+</span>
+    <span class="stat-label" data-lang="hr">Verificiranih vila</span>
+    <span class="stat-label" data-lang="en">Verified villas</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-num">0%</span>
+    <span class="stat-label" data-lang="hr">Provizija na rezervacije</span>
+    <span class="stat-label" data-lang="en">Commission on bookings</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-num">48h</span>
+    <span class="stat-label" data-lang="hr">Do aktivacije oglasa</span>
+    <span class="stat-label" data-lang="en">To listing activation</span>
+  </div>
+  <div class="stat-divider"></div>
+  <div class="stat-item">
+    <span class="stat-num">1 god</span>
+    <span class="stat-label" data-lang="hr">Besplatno oglašavanje</span>
+    <span class="stat-label" data-lang="en">Free listing period</span>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="why-section">
+  <div class="why-inner">
+    <div class="why-left">
+      <p class="section-label">
+        <span data-lang="hr">Zašto LCR</span>
+        <span data-lang="en">Why LCR</span>
+      </p>
+      <h2 class="section-title">
+        <span data-lang="hr">Tržište se promijenilo.<br><em>Mi smo odgovor.</em></span>
+        <span data-lang="en">The market changed.<br><em>We are the answer.</em></span>
+      </h2>
+      <p class="why-desc">
+        <span data-lang="hr">Booking.com i Airbnb uzimaju do 20% vaše zarade. LCR je nastao jer vlasnici luksuznih vila zaslužuju bolji model — direktan kontakt s gostom, transparentne cijene i punu kontrolu nad svojom vilom.</span>
+        <span data-lang="en">Booking.com and Airbnb take up to 20% of your revenue. LCR was created because luxury villa owners deserve a better model — direct guest contact, transparent pricing, and full control over their property.</span>
+      </p>
+      <a href="#paketi" class="btn-primary" onclick="document.getElementById('paketi').scrollIntoView({behavior:'smooth'}); return false;">
+        <span data-lang="hr">Saznaj više</span>
+        <span data-lang="en">Learn more</span>
+      </a>
+    </div>
+    <div class="why-right">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <div class="why-card-title" data-lang="hr">Direktne rezervacije</div>
+          <div class="why-card-title" data-lang="en">Direct bookings</div>
+          <p class="why-card-text" data-lang="hr">Gost kontaktira vas izravno. Nema posrednika ni skrivenih naknada.</p>
+          <p class="why-card-text" data-lang="en">Guests contact you directly. No middlemen or hidden fees.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💳</div>
+          <div class="why-card-title" data-lang="hr">Kartično plaćanje</div>
+          <div class="why-card-title" data-lang="en">Card payments</div>
+          <p class="why-card-text" data-lang="hr">Sigurno online plaćanje putem WSPay sustava. Bez naše provizije.</p>
+          <p class="why-card-text" data-lang="en">Secure online payment via WSPay. Zero commission to us.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📱</div>
+          <div class="why-card-title" data-lang="hr">Web & Aplikacija</div>
+          <div class="why-card-title" data-lang="en">Web & App</div>
+          <p class="why-card-text" data-lang="hr">Vaš oglas vidljiv na webu i mobilnoj iOS/Android aplikaciji.</p>
+          <p class="why-card-text" data-lang="en">Your listing visible on web and iOS/Android mobile app.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">✓</div>
+          <div class="why-card-title" data-lang="hr">Verifikacija kvalitete</div>
+          <div class="why-card-title" data-lang="en">Quality verification</div>
+          <p class="why-card-text" data-lang="hr">Svaka vila prolazi ručnu provjeru. Samo najviši standard.</p>
+          <p class="why-card-text" data-lang="en">Every villa goes through manual review. Highest standard only.</p>
+        </div>
+        <div class="why-card" style="grid-column: 1 / -1; background: var(--teal-pale); border-color: var(--teal);">
+          <div class="why-icon" style="background: var(--teal); font-size: 20px;">💸</div>
+          <div class="why-card-title" data-lang="hr" style="color: var(--teal); font-size: 22px;">Isplata unutar 24 sata od check-ina</div>
+          <div class="why-card-title" data-lang="en" style="color: var(--teal); font-size: 22px;">Payout within 24 hours of check-in</div>
+          <p class="why-card-text" data-lang="hr">Čim gost stigne u vašu vilu — novac je na putu do vas. Bez čekanja tjednima kao na Booking.com ili Airbnb.</p>
+          <p class="why-card-text" data-lang="en">As soon as your guest arrives — the money is on its way to you. No waiting weeks like on Booking.com or Airbnb.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="steps-section">
+  <div class="steps-inner">
+    <div class="steps-header">
+      <p class="section-label">
+        <span data-lang="hr">Kako funkcionira</span>
+        <span data-lang="en">How it works</span>
+      </p>
+      <h2 class="section-title">
+        <span data-lang="hr">Tri koraka do <em>prve rezervacije</em></span>
+        <span data-lang="en">Three steps to <em>your first booking</em></span>
+      </h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <span class="step-num">01</span>
+        <div class="step-title" data-lang="hr">Ispunite formu</div>
+        <div class="step-title" data-lang="en">Fill the form</div>
+        <p class="step-text" data-lang="hr">Dodajte slike, opis i osnovne podatke o vašoj vili. Traje svega nekoliko minuta.</p>
+        <p class="step-text" data-lang="en">Add photos, description and basic details about your villa. Takes just a few minutes.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">02</span>
+        <div class="step-title" data-lang="hr">Verifikacija</div>
+        <div class="step-title" data-lang="en">Verification</div>
+        <p class="step-text" data-lang="hr">Naš tim pregledava vaš oglas i provjerava kvalitetu. Dobivate pristupni ključ za objavu.</p>
+        <p class="step-text" data-lang="en">Our team reviews your listing and checks quality. You receive your publishing access key.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-num">03</span>
+        <div class="step-title" data-lang="hr">Oglas je aktivan</div>
+        <div class="step-title" data-lang="en">Listing goes live</div>
+        <p class="step-text" data-lang="hr">Unutar 48 sati vaša vila je vidljiva na LCR webu i aplikaciji. Gosti vas kontaktiraju direktno.</p>
+        <p class="step-text" data-lang="en">Within 48 hours your villa is visible on LCR web and app. Guests contact you directly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div id="paketi" style="background: var(--white);">
+  <div style="max-width:1200px; margin:0 auto; padding:80px 64px;">
+    <div style="text-align:center; margin-bottom:56px;">
+      <p class="section-label" style="justify-content:center;">
+        <span data-lang="hr">Članstvo</span>
+        <span data-lang="en">Membership</span>
+      </p>
+      <h2 class="section-title" style="margin-bottom:12px;">
+        <span data-lang="hr">Jednostavno.<br><em>Besplatno. Bez provizije.</em></span>
+        <span data-lang="en">Simple.<br><em>Free. No commission.</em></span>
+      </h2>
+      <p style="font-size:15px; font-weight:300; color:var(--text-light);">
+        <span data-lang="hr">Nula provizije na rezervacije. Uvijek.</span>
+        <span data-lang="en">Zero commission on bookings. Always.</span>
+      </p>
+    </div>
+
+    <!-- SINGLE CARD -->
+    <div style="max-width:560px; margin:0 auto;">
+      <div class="pricing-card" style="border-color:var(--teal);">
+        <span class="price-badge" style="background:var(--teal); color:white;">Besplatno · Godišnje članstvo</span>
+        <span class="price-amount">0€</span>
+        <span class="price-period">Nula naknade za oglašavanje · 0% provizije na rezervacije</span>
+        <div style="background:var(--teal-pale); border-radius:6px; padding:12px 16px; margin-bottom:24px; display:flex; align-items:center; gap:10px;">
+          <span style="font-size:18px;">🎁</span>
+          <p style="font-size:13px; font-weight:400; color:var(--teal); margin:0;">
+            <strong>Besplatno najmanje godinu dana</strong> — bez skrivenih troškova, bez obaveza. Pridružite se dok traje.
+          </p>
+        </div>
+        <ul class="price-features">
+          <li>Oglas na webu i mobilnoj aplikaciji</li>
+          <li>Direktna komunikacija s gostima</li>
+          <li>Kartično plaćanje bez provizije</li>
+          <li style="color:var(--teal); font-weight:500;">⚡ Isplata unutar 24h od check-ina</li>
+          <li>Upravljanje kalendarom i cijenama</li>
+          <li>Verifikacijska oznaka kvalitete</li>
+        </ul>
+        <a href="https://form.typeform.com/to/VfTTIk3X" class="btn-primary" style="display:block; text-align:center;">Postani partner besplatno →</a>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; background:var(--teal-pale); border:1px solid var(--border); border-radius:8px; padding:16px 24px; text-align:center; max-width:560px; margin-left:auto; margin-right:auto;">
+      <p style="font-size:13px; font-weight:300; color:var(--text-light); margin:0;">
+        💳 <strong style="color:var(--text);">Napomena o plaćanju:</strong> Gost plaća 5% naknade za obradu plaćanja putem našeg sustava — ta naknada se automatski nadodaje na cijenu rezervacije i <strong style="color:var(--text);">ne oduzima se od vaše zarade.</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- O NAMA -->
+<div style="background: var(--white);">
+  <div style="max-width:1200px; margin:0 auto; padding:80px 64px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+
+      <!-- LEFT — slika -->
+      <div style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80"
+          alt="Luksuzna vila u Hrvatskoj uz more"
+          style="width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px; display:block;">
+        <div style="position:absolute; bottom:32px; left:-24px; background:var(--teal); color:white; padding:24px 28px; border-radius:4px; max-width:220px;">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; line-height:1;">3</div>
+          <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; opacity:0.8; margin-top:4px;">Generacije u turizmu</div>
+        </div>
+      </div>
+
+      <!-- RIGHT — tekst -->
+      <div>
+        <p class="section-label">
+          <span data-lang="hr">Naša priča</span>
+          <span data-lang="en">Our story</span>
+        </p>
+        <h2 class="section-title">
+          <span data-lang="hr">Nastalo iz <em>frustracije.</em><br>Izgrađeno iz <em>iskustva.</em></span>
+          <span data-lang="en">Born from <em>frustration.</em><br>Built from <em>experience.</em></span>
+        </h2>
+
+        <p style="font-size:15px; font-weight:300; color:var(--text-light); line-height:1.9; margin-bottom:20px;">
+          <span data-lang="hr">Nisam osnovala LCR kao poslovnu ideju. Osnovala sam ga kao odgovor na problem koji sam sama živjela — kao vlasnica vile koja je godinama plaćala velike provizije platformama dok je istovremeno gledala kako gosti žele direktan kontakt, osobni odnos i autentično iskustvo.</span>
+          <span data-lang="en">I didn't found LCR as a business idea. I founded it as an answer to a problem I lived myself — as a villa owner who paid large commissions to platforms for years, while watching guests reach out for direct contact, personal relationships and authentic experiences.</span>
+        </p>
+
+        <p style="font-size:15px; font-weight:300; color:var(--text-light); line-height:1.9; margin-bottom:20px;">
+          <span data-lang="hr">Turizam mi je u krvi — tri generacije moje obitelji grade i žive ovaj posao. Znam što znači svaka rezervacija, svaki gost, svaki euro koji ostaje ili odlazi posredniku. I znam da model visokih provizija nije dugoročno rješenje ni za vlasnike ni za goste.</span>
+          <span data-lang="en">Tourism runs in my blood — three generations of my family have built and lived this business. I know what every booking means, every guest, every euro that stays or goes to an intermediary. And I know that the high-commission model is not a long-term solution for owners or guests.</span>
+        </p>
+
+        <p style="font-size:15px; font-weight:300; color:var(--text-light); line-height:1.9; margin-bottom:36px;">
+          <span data-lang="hr">LCR je platforma kakvu sam sama željela imati. Direktna. Poštena. Bez posrednika. Izgrađena od nekoga tko razumije i stranu vlasnika i stranu gosta — jer sam bila oboje.</span>
+          <span data-lang="en">LCR is the platform I wished I had. Direct. Honest. Without intermediaries. Built by someone who understands both the owner's side and the guest's side — because I've been both.</span>
+        </p>
+
+        <div style="display:flex; align-items:center; gap:16px; padding-top:24px; border-top:1px solid var(--border);">
+          <div style="width:48px; height:48px; background:var(--teal-pale); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;">👤</div>
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--text);">Osnivačica · Luxury Croatia Retreats</div>
+            <div style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--teal); margin-top:2px;">Split, Hrvatska · Est. 2022</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div style="height:1px; background:var(--border); margin:0 64px;"></div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial-section">
+  <div class="testimonial-inner">
+    <div class="quote-mark">"</div>
+    <p class="quote-text" data-lang="hr">LCR nam je donio direktne goste bez da plaćamo proviziju velikim platformama. Napokon smo u kontroli vlastite vile i vlastite zarade.</p>
+    <p class="quote-text" data-lang="en">LCR brought us direct guests without paying commission to big platforms. We're finally in control of our own villa and our own revenue.</p>
+    <p class="quote-author" data-lang="hr">Vlasnik vile · Hvar, Hrvatska</p>
+    <p class="quote-author" data-lang="en">Villa owner · Hvar, Croatia</p>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="cta-section">
+  <p class="section-label" style="justify-content:center; color:rgba(255,255,255,0.5);">
+    <span data-lang="hr">Pridružite se</span>
+    <span data-lang="en">Join us</span>
+  </p>
+  <h2 class="cta-title">
+    <span data-lang="hr">Vaša vila zaslužuje<br><em>bolji model.</em></span>
+    <span data-lang="en">Your villa deserves<br><em>a better model.</em></span>
+  </h2>
+  <p class="cta-sub" data-lang="hr">Postanite dio zajednice koja mijenja luksuzni turizam u Hrvatskoj.</p>
+  <p class="cta-sub" data-lang="en">Join the community that is changing luxury tourism in Croatia.</p>
+  <a href="https://form.typeform.com/to/VfTTIk3X" class="btn-primary">
+    <span data-lang="hr">Postani partner →</span>
+    <span data-lang="en">Become a partner →</span>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-logo">LCR · Partners</div>
+  <div style="display:flex; gap:24px; align-items:center;">
+    <a href="https://www.instagram.com/luxurycroatiaretreats/" class="footer-link" target="_blank" style="display:flex; align-items:center; gap:6px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.tiktok.com/@luxurycroatiaretreats" class="footer-link" target="_blank" style="display:flex; align-items:center; gap:6px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg>
+      TikTok
+    </a>
+    <a href="https://newaveadagency.github.io/lcr_moments/" class="footer-link" target="_blank" style="display:flex; align-items:center; gap:6px; color:var(--teal); font-weight:500;">
+      ✦ LCR Moments
+    </a>
+    <a href="https://form.typeform.com/to/VfTTIk3X" class="footer-link" target="_blank" style="color:var(--teal); font-weight:500;">
+      Postani partner →
+    </a>
+  </div>
+  <a href="https://luxurycroatiaretreats.com" class="footer-link">luxurycroatiaretreats.com →</a>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  function setLang(lang) {
+    document.body.classList.toggle('en', lang === 'en');
+    document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', (i === 0 && lang === 'hr') || (i === 1 && lang === 'en'));
+    });
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.why-card, .step-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
