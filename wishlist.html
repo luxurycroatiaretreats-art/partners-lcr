@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moji Favoriti – Croatia Premium Stay</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#115571">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0A2535; --teal: #115571; --teal-pale: #E8F4F8; --teal-pale2: #D0E8F0;
+  --gold: #C4974E; --gold-pale: #FDF6E8; --gold-warm: #F0E8D5;
+  --white: #fff; --cream: #F7F5F1; --off-white: #FAFAFA;
+  --border: #E2EEF2; --border-dark: #C8DDE4;
+  --text: #0F1E24; --text-light: #5A7880; --text-muted: #8AA8B0;
+  --shadow-sm: 0 1px 12px rgba(10,37,53,0.06);
+  --shadow: 0 4px 24px rgba(10,37,53,0.10);
+  --shadow-lg: 0 12px 48px rgba(10,37,53,0.14);
+}
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: white; color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 200; height: 64px; background: rgba(255,255,255,0.97); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); flex-shrink: 0; }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 400;
+  color: var(--teal); letter-spacing: 0.06em;
+  text-decoration: none; flex-shrink: 0;
+  display: flex; align-items: baseline; gap: 5px;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.75; }
+.nav-logo-premium {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: none; padding: 6px; flex-shrink: 0; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--teal); border-radius: 2px; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-drawer { display: flex; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: white; z-index: 199; padding: 28px 24px; flex-direction: column; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94); overflow-y: auto; }
+.mobile-drawer.open { transform: translateX(0); }
+.mob-link { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--border); display: block; }
+.mob-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.mob-lang { display: flex; gap: 8px; }
+.mob-lang button { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-light); background: white; cursor: pointer; }
+.mob-lang button.on { background: var(--teal); color: white; border-color: var(--teal); }
+.mob-btn { width: 100%; padding: 14px; border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border: none; }
+.mob-btn-ghost { background: transparent; border: 1px solid var(--border-dark); color: var(--text-light); }
+.mob-btn-solid { background: var(--teal); color: white; }
+
+/* HEADER */
+.page-header { background: white; border-bottom: 1px solid var(--border); padding: 40px 56px 36px; }
+.ph-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.38em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.ph-eyebrow::before { content: '♥'; color: #E24B4A; font-size: 12px; }
+.ph-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 300; color: var(--text); line-height: 1.1; margin-bottom: 10px; }
+.ph-title em { font-style: italic; color: var(--teal); }
+.ph-sub { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-muted); display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.ph-expires { background: var(--gold-warm); border: 1px solid #DDD0B8; border-radius: 20px; padding: 4px 12px; font-size: 11px; color: #8A6820; display: flex; align-items: center; gap: 6px; }
+
+/* FILTER TABS */
+.filter-tabs { padding: 0 56px; border-bottom: 1px solid var(--border); display: flex; gap: 0; background: white; position: sticky; top: 64px; z-index: 100; box-shadow: var(--shadow-sm); }
+.ftab { padding: 16px 24px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); cursor: pointer; border: none; background: transparent; border-bottom: 2px solid transparent; transition: all 0.2s; display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.ftab:hover { color: var(--teal); }
+.ftab.on { color: var(--teal); border-bottom-color: var(--teal); font-weight: 500; }
+.ftab-count { background: var(--teal); color: white; border-radius: 20px; padding: 1px 8px; font-size: 10px; font-weight: 600; }
+
+/* MAIN */
+.main { flex: 1; padding: 40px 56px; }
+
+/* EMPTY STATE */
+.empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 40px; text-align: center; }
+.empty-icon { font-size: 64px; opacity: 0.25; margin-bottom: 20px; }
+.empty-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--text); margin-bottom: 10px; }
+.empty-title em { font-style: italic; color: var(--teal); }
+.empty-text { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.8; margin-bottom: 28px; max-width: 380px; }
+.empty-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.empty-btn { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 24px; border-radius: 6px; cursor: pointer; transition: all 0.25s; }
+.eb-solid { background: var(--teal); color: white; border: none; }
+.eb-solid:hover { background: var(--navy); }
+.eb-ghost { background: transparent; border: 1px solid var(--border-dark); color: var(--text-light); }
+.eb-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* GRID */
+.wishlist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* CARD */
+.wish-card { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s, border-color 0.2s; cursor: pointer; position: relative; opacity: 0; transform: translateY(16px); }
+.wish-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.2s; }
+.wish-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--border-dark); }
+
+.wc-img { height: 210px; position: relative; overflow: hidden; }
+.wc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.wish-card:hover .wc-img img { transform: scale(1.06); }
+
+.wc-type-badge { position: absolute; top: 14px; left: 14px; font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; z-index: 1; }
+.wcb-villa { background: var(--teal); color: white; }
+.wcb-exp { background: var(--gold); color: white; }
+.wcb-hotel { background: var(--navy); color: white; }
+
+.wc-remove { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; cursor: pointer; z-index: 1; border: none; transition: transform 0.2s, background 0.2s; color: #E24B4A; box-shadow: var(--shadow-sm); }
+.wc-remove:hover { transform: scale(1.15); background: #FEE2E2; }
+
+.wc-expires { position: absolute; bottom: 12px; left: 14px; background: rgba(255,255,255,0.95); border-radius: 20px; padding: 3px 10px; font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 400; color: var(--text-muted); z-index: 1; display: flex; align-items: center; gap: 4px; }
+.wc-expires-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+.wc-body { padding: 16px 18px 20px; }
+.wc-cat { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
+.wc-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--text); margin-bottom: 4px; line-height: 1.2; }
+.wc-loc { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; color: var(--text-muted); margin-bottom: 12px; }
+.wc-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--border); }
+.wc-price { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--text-light); }
+.wc-price strong { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--teal); }
+.wc-rating { font-family: 'Jost', sans-serif; font-size: 11px; color: var(--text-light); display: flex; align-items: center; gap: 3px; }
+.star { color: #F4A92A; }
+
+/* SHARE / CLEAR */
+.wishlist-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
+.wa-count { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-light); }
+.wa-count strong { font-weight: 500; color: var(--text); }
+.wa-btns { display: flex; gap: 8px; }
+.wa-btn { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 16px; border-radius: 6px; cursor: pointer; border: 1px solid var(--border); background: white; color: var(--text-light); transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
+.wa-btn:hover { border-color: var(--teal); color: var(--teal); }
+.wa-btn-clear { border-color: #FCA5A5; color: #DC2626; }
+.wa-btn-clear:hover { background: #FEF2F2; border-color: #DC2626; }
+
+/* NOTE */
+.wishlist-note { background: var(--teal-pale); border: 1px solid var(--teal-pale2); border-radius: 8px; padding: 14px 18px; margin-bottom: 28px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: var(--teal); display: flex; align-items: center; gap: 10px; line-height: 1.6; }
+
+/* SUGGESTIONS */
+.suggestions { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+.sugg-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text); margin-bottom: 6px; }
+.sugg-title em { font-style: italic; color: var(--teal); }
+.sugg-sub { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text-muted); margin-bottom: 24px; }
+.sugg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.sugg-card { border-radius: 8px; overflow: hidden; cursor: pointer; position: relative; height: 180px; transition: box-shadow 0.3s; }
+.sugg-card:hover { box-shadow: var(--shadow-lg); }
+.sugg-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.sugg-card:hover img { transform: scale(1.06); }
+.sugg-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,37,53,0.85) 0%, rgba(10,37,53,0.1) 60%); }
+.sugg-card-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 16px; }
+.sugg-card-cat { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+.sugg-card-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 300; color: white; line-height: 1.2; }
+
+/* MOBILE */
+@media (max-width: 1100px) {
+  html { font-size: 17px; }
+  nav { padding: 0 20px; }
+  .page-header { padding: 32px 20px 28px; }
+  .filter-tabs { padding: 0 16px; overflow-x: auto; scrollbar-width: none; }
+  .filter-tabs::-webkit-scrollbar { display: none; }
+  .main { padding: 24px 20px; }
+  .wishlist-grid { grid-template-columns: 1fr; }
+  .sugg-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+  .wishlist-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <a href="index.html" class="nav-logo">
+    Croatia <span class="nav-logo-premium">premium</span> Stay
+  </a>
+  <button style="font-size:16px; color:#E24B4A; background:transparent; border:none; cursor:pointer; padding:6px 10px;">♥</button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="mob-link" onclick="toggleMenu()">Početna</a>
+  <a href="vile.html" class="mob-link" onclick="toggleMenu()" data-fixed>Vile</a>
+  <a href="iskustva.html" class="mob-link" onclick="toggleMenu()">Iskustva</a>
+  <a href="hoteli.html" class="mob-link" onclick="toggleMenu()">Hoteli</a>
+  <a href="moments.html" class="mob-link" onclick="toggleMenu()">CPS Moments</a>
+  <a href="o-nama.html" class="mob-link" onclick="toggleMenu()">O nama</a>
+  <div class="mob-actions">
+    <div class="mob-lang"><button class="on">HR</button><button>EN</button><button>DE</button></div>
+    <button class="mob-btn mob-btn-ghost" onclick="window.location.href='owner-dashboard.html'">Prijava</button>
+    <button class="mob-btn mob-btn-solid" onclick="window.location.href='owner-add-property.html'">Oglasite objekt</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="page-header" id="pageHeader">
+  <p class="ph-eyebrow">Vaši favoriti</p>
+  <h1 class="ph-title">Moji <em>favoriti.</em></h1>
+  <div class="ph-sub">
+    <span id="header-count">Učitavanje...</span>
+    <span class="ph-expires">⏱ Pamtimo 7 dana</span>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<div class="filter-tabs">
+  <button class="ftab on" onclick="filterFavs(this,'sve')">
+    ✦ Sve <span class="ftab-count" id="count-sve">0</span>
+  </button>
+  <button class="ftab" onclick="filterFavs(this,'villa')">
+    🏠 Vile <span class="ftab-count" id="count-villa">0</span>
+  </button>
+  <button class="ftab" onclick="filterFavs(this,'experience')">
+    ✦ Iskustva <span class="ftab-count" id="count-experience">0</span>
+  </button>
+  <button class="ftab" onclick="filterFavs(this,'hotel')">
+    🏨 Hoteli <span class="ftab-count" id="count-hotel">0</span>
+  </button>
+</div>
+
+<!-- MAIN -->
+<main class="main" id="mainContent">
+
+  <!-- LOADING -->
+  <div id="loadingState" style="text-align:center; padding:60px; color:var(--text-muted); font-family:'Jost',sans-serif; font-size:14px; font-weight:300;">
+    Učitavanje favorita...
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div class="empty-state" id="emptyState" style="display:none;">
+    <div class="empty-icon">♡</div>
+    <h2 class="empty-title">Još nema <em>favorita.</em></h2>
+    <p class="empty-text">Dodajte vile, iskustva i hotele koji vam se sviđaju klikom na srce ♡ — i naći ćete ih ovdje 7 dana.</p>
+    <div class="empty-btns">
+      <button class="empty-btn eb-solid" onclick="window.location.href='vile.html'">Istražite vile →</button>
+      <button class="empty-btn eb-ghost" onclick="window.location.href='iskustva.html'">Istražite iskustva</button>
+    </div>
+  </div>
+
+  <!-- WISHLIST CONTENT -->
+  <div id="wishlistContent" style="display:none;">
+
+    <!-- NOTE -->
+    <div class="wishlist-note">
+      ℹ️ Vaši favoriti su spremljeni lokalno na ovom uređaju i bit će dostupni 7 dana.
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="wishlist-actions">
+      <div class="wa-count">Prikazuje se <strong id="showing-count">0</strong> favorita</div>
+      <div class="wa-btns">
+        <button class="wa-btn" onclick="shareWishlist()">🔗 Podijeli listu</button>
+        <button class="wa-btn wa-btn-clear" onclick="clearAllFavs()">🗑 Obriši sve</button>
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="wishlist-grid" id="wishlistGrid"></div>
+
+  </div>
+
+  <!-- SUGGESTIONS -->
+  <div class="suggestions" id="suggestions">
+    <h2 class="sugg-title">Možda će vam se <em>svidjeti.</em></h2>
+    <p class="sugg-sub">Pažljivo odabrano za goste koji znaju razliku.</p>
+    <div class="sugg-grid">
+      <div class="sugg-card" onclick="window.location.href='vile.html'">
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&q=80" alt="Villa Amelie Dubrovnik" loading="lazy" width="500" height="333">
+        <div class="sugg-card-overlay"></div>
+        <div class="sugg-card-content">
+          <div class="sugg-card-cat">🏠 Vila · Dubrovnik</div>
+          <div class="sugg-card-name">Villa Amelie</div>
+        </div>
+      </div>
+      <div class="sugg-card" onclick="window.location.href='iskustva.html'">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" alt="Zrno Soli Split" loading="lazy" width="500" height="333">
+        <div class="sugg-card-overlay"></div>
+        <div class="sugg-card-content">
+          <div class="sugg-card-cat">🍽️ Restoran · Split</div>
+          <div class="sugg-card-name">Zrno Soli</div>
+        </div>
+      </div>
+      <div class="sugg-card" onclick="window.location.href='hoteli.html'">
+        <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=500&q=80" alt="Vestibul Palace Split" loading="lazy" width="500" height="333">
+        <div class="sugg-card-overlay"></div>
+        <div class="sugg-card-content">
+          <div class="sugg-card-cat">🏨 Hotel · Split</div>
+          <div class="sugg-card-name">Vestibul Palace</div>
+        </div>
+      </div>
+      <div class="sugg-card" onclick="window.location.href='iskustva.html'">
+        <img src="https://images.unsplash.com/photo-1474169158499-049e53a1f9c7?w=500&q=80" alt="Jedrilica Hvar" loading="lazy" width="500" height="333">
+        <div class="sugg-card-overlay"></div>
+        <div class="sugg-card-content">
+          <div class="sugg-card-cat">⛵ Brod · Hvar</div>
+          <div class="sugg-card-name">Privatna jedrilica</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// HAMBURGER
+function toggleMenu() {
+  const h = document.getElementById('hamburger');
+  const d = document.getElementById('mobileDrawer');
+  h.classList.toggle('open');
+  d.classList.toggle('open');
+  document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+}
+
+// WISHLIST DATA
+let allFavs = [];
+let activeFilter = 'sve';
+
+// DEMO DATA — za prikaz kako izgleda
+// U produkciji ovo dolazi iz localStorage
+const demoFavs = [
+  {
+    id: 'villa-amelie',
+    type: 'villa',
+    name: 'Villa Amelie',
+    location: 'Dubrovnik · Dalmacija',
+    price: 'Od 2.000€ /noć',
+    rating: '4.9 (32)',
+    image: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80',
+    badge: 'Featured',
+    link: 'vila.html',
+    saved: Date.now() - (2 * 24 * 60 * 60 * 1000),
+    expires: Date.now() + (5 * 24 * 60 * 60 * 1000)
+  },
+  {
+    id: 'zrno-soli',
+    type: 'experience',
+    name: 'Zrno Soli Restaurant',
+    location: 'Split · Sea view terasa',
+    price: 'Od 85€ / pp',
+    rating: '4.9 (48)',
+    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
+    badge: 'Restoran',
+    link: 'iskustvo.html',
+    saved: Date.now() - (1 * 24 * 60 * 60 * 1000),
+    expires: Date.now() + (6 * 24 * 60 * 60 * 1000)
+  },
+  {
+    id: 'vestibul',
+    type: 'hotel',
+    name: 'Hotel Vestibul Palace',
+    location: 'Unutar Dioklecijanove palače · Split',
+    price: 'Od 350€ /noć',
+    rating: '4.9 (124)',
+    image: 'https://images.unsplash.com/photo-1555990793-da11153b2473?w=600&q=80',
+    badge: 'Heritage',
+    link: 'hoteli.html',
+    saved: Date.now() - (3 * 60 * 60 * 1000),
+    expires: Date.now() + (6 * 24 * 60 * 60 * 1000)
+  }
+];
+
+function getExpiresText(expires) {
+  const days = Math.ceil((expires - Date.now()) / (24 * 60 * 60 * 1000));
+  if (days <= 0) return 'Istječe danas';
+  if (days === 1) return 'Istječe sutra';
+  return `Istječe za ${days} dana`;
+}
+
+function getTypeBadge(type) {
+  const map = { villa: { class: 'wcb-villa', text: '🏠 Vila' }, experience: { class: 'wcb-exp', text: '✦ Iskustvo' }, hotel: { class: 'wcb-hotel', text: '🏨 Hotel' } };
+  return map[type] || { class: 'wcb-villa', text: type };
+}
+
+function getCatText(type) {
+  const map = { villa: 'Luksuzna vila', experience: 'Iskustvo', hotel: 'Boutique hotel' };
+  return map[type] || type;
+}
+
+function renderCard(fav, index) {
+  const badge = getTypeBadge(fav.type);
+  const expires = getExpiresText(fav.expires);
+  return `
+    <article class="wish-card" onclick="window.location.href='${fav.link}'" data-type="${fav.type}">
+      <div class="wc-img">
+        <img src="${fav.image}" alt="${fav.name}" loading="lazy" width="600" height="400">
+        <span class="wc-type-badge ${badge.class}">${badge.text}</span>
+        <button class="wc-remove" onclick="event.stopPropagation(); removeFav('${fav.id}', this)" title="Ukloni iz favorita">♥</button>
+        <span class="wc-expires"><span class="wc-expires-dot"></span>${expires}</span>
+      </div>
+      <div class="wc-body">
+        <div class="wc-cat">${getCatText(fav.type)}</div>
+        <h3 class="wc-name">${fav.name}</h3>
+        <p class="wc-loc">📍 ${fav.location}</p>
+        <div class="wc-footer">
+          <div class="wc-price">${fav.price}</div>
+          <div class="wc-rating"><span class="star">★</span> ${fav.rating}</div>
+        </div>
+      </div>
+    </article>`;
+}
+
+function renderWishlist(favs) {
+  const grid = document.getElementById('wishlistGrid');
+  const filtered = activeFilter === 'sve' ? favs : favs.filter(f => f.type === activeFilter);
+  grid.innerHTML = filtered.map((f, i) => renderCard(f, i)).join('');
+  document.getElementById('showing-count').textContent = filtered.length;
+
+  // Animate
+  setTimeout(() => {
+    grid.querySelectorAll('.wish-card').forEach((c, i) => {
+      setTimeout(() => c.classList.add('visible'), i * 80);
+    });
+  }, 50);
+}
+
+function updateCounts(favs) {
+  document.getElementById('count-sve').textContent = favs.length;
+  document.getElementById('count-villa').textContent = favs.filter(f => f.type === 'villa').length;
+  document.getElementById('count-experience').textContent = favs.filter(f => f.type === 'experience').length;
+  document.getElementById('count-hotel').textContent = favs.filter(f => f.type === 'hotel').length;
+}
+
+function loadWishlist() {
+  // Učitaj iz localStorage — u produkciji
+  // Za demo koristimo demoFavs
+  let favs = [];
+  try {
+    const stored = JSON.parse(localStorage.getItem('lcr_favs') || '[]');
+    favs = stored.filter(f => f.expires > Date.now());
+    localStorage.setItem('lcr_favs', JSON.stringify(favs));
+  } catch(e) {}
+
+  // Ako nema u localStorage — pokaži demo
+  if (favs.length === 0) favs = demoFavs;
+
+  allFavs = favs;
+
+  document.getElementById('loadingState').style.display = 'none';
+
+  if (favs.length === 0) {
+    document.getElementById('emptyState').style.display = 'flex';
+    document.getElementById('wishlistContent').style.display = 'none';
+    document.getElementById('header-count').textContent = 'Nema favorita';
+  } else {
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('wishlistContent').style.display = 'block';
+    document.getElementById('header-count').textContent = `${favs.length} ${favs.length === 1 ? 'favorit' : favs.length < 5 ? 'favorita' : 'favorita'}`;
+    updateCounts(favs);
+    renderWishlist(favs);
+  }
+}
+
+function filterFavs(el, type) {
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('on'));
+  el.classList.add('on');
+  activeFilter = type;
+  renderWishlist(allFavs);
+}
+
+function removeFav(id, btn) {
+  // Animiraj uklanjanje
+  const card = btn.closest('.wish-card');
+  card.style.transition = 'opacity 0.3s, transform 0.3s';
+  card.style.opacity = '0';
+  card.style.transform = 'scale(0.95)';
+
+  setTimeout(() => {
+    // Ukloni iz localStorage
+    try {
+      const favs = JSON.parse(localStorage.getItem('lcr_favs') || '[]');
+      localStorage.setItem('lcr_favs', JSON.stringify(favs.filter(f => f.id !== id)));
+    } catch(e) {}
+
+    allFavs = allFavs.filter(f => f.id !== id);
+    updateCounts(allFavs);
+    renderWishlist(allFavs);
+
+    if (allFavs.length === 0) {
+      document.getElementById('wishlistContent').style.display = 'none';
+      document.getElementById('emptyState').style.display = 'flex';
+      document.getElementById('header-count').textContent = 'Nema favorita';
+    } else {
+      document.getElementById('header-count').textContent = `${allFavs.length} favorita`;
+    }
+  }, 300);
+}
+
+function clearAllFavs() {
+  if (!confirm('Obrisati sve favorite?')) return;
+  try { localStorage.removeItem('lcr_favs'); } catch(e) {}
+  allFavs = [];
+  document.getElementById('wishlistContent').style.display = 'none';
+  document.getElementById('emptyState').style.display = 'flex';
+  document.getElementById('header-count').textContent = 'Nema favorita';
+  updateCounts([]);
+}
+
+function shareWishlist() {
+  const names = allFavs.map(f => f.name).join(', ');
+  const text = `Moji favoriti na Croatia Premium Stay: ${names}`;
+  if (navigator.share) {
+    navigator.share({ title: 'Moji CPS favoriti', text, url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('Link kopiran!'));
+  }
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', loadWishlist);
+
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+</script>
+
+</body>
+</html>

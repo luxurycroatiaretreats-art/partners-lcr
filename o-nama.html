@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nama – Croatia Premium Stay | Ivana & Dorijan</title>
+<meta name="description" content="Croatia Premium Stay nastao je iz ljubavi prema Hrvatskoj i frustracije prema posrednicima. Priča Ivane i Dorijana — vlasnice vile i njenog susjeda koji je promijenio sve.">
+<link rel="canonical" href="https://croatiapremiustay.com/hr/o-nama/">
+<link rel="alternate" hreflang="hr" href="https://croatiapremiustay.com/hr/o-nama/">
+<link rel="alternate" hreflang="en" href="https://croatiapremiustay.com/en/about/">
+<link rel="alternate" hreflang="de" href="https://croatiapremiustay.com/de/uber-uns/">
+<meta name="theme-color" content="#115571">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Croatia Premium Stay",
+  "url": "https://croatiapremiustay.com",
+  "description": "Platforma koja spaja goste direktno s vlasnicima luksuznih vila i iskustava u Hrvatskoj.",
+  "founder": [
+    {"@type": "Person", "name": "Ivana", "jobTitle": "Co-founder & CEO"},
+    {"@type": "Person", "name": "Dorijan", "jobTitle": "Co-founder & CTO"}
+  ],
+  "foundingDate": "2024",
+  "areaServed": "Croatia"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0A2535; --teal: #115571; --teal-pale: #E8F4F8; --teal-pale2: #D0E8F0;
+  --gold: #C4974E; --gold-pale: #FDF6E8; --gold-warm: #F0E8D5;
+  --white: #fff; --cream: #F7F5F1; --off-white: #FAFAFA;
+  --border: #E2EEF2; --border-dark: #C8DDE4;
+  --text: #0F1E24; --text-light: #5A7880; --text-muted: #8AA8B0;
+  --shadow-sm: 0 1px 12px rgba(10,37,53,0.06);
+  --shadow: 0 4px 24px rgba(10,37,53,0.10);
+  --shadow-lg: 0 12px 48px rgba(10,37,53,0.14);
+}
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: white; color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 200; height: 64px; background: rgba(255,255,255,0.97); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 400;
+  color: var(--teal); letter-spacing: 0.06em;
+  text-decoration: none; flex-shrink: 0;
+  display: flex; align-items: baseline; gap: 5px;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.75; }
+.nav-logo-premium {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: none; padding: 6px; flex-shrink: 0; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--teal); border-radius: 2px; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-wishlist { display: flex; align-items: center; font-size: 16px; color: var(--text-light); cursor: pointer; background: transparent; border: none; padding: 6px 10px; border-radius: 6px; transition: color 0.2s; flex-shrink: 0; position: relative; }
+.nav-wishlist:hover { color: var(--teal); }
+.mobile-drawer { display: flex; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: white; z-index: 199; padding: 28px 24px; flex-direction: column; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94); overflow-y: auto; }
+.mobile-drawer.open { transform: translateX(0); }
+.mob-link { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--border); display: block; }
+.mob-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.mob-lang { display: flex; gap: 8px; }
+.mob-lang button { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-light); background: white; cursor: pointer; }
+.mob-lang button.on { background: var(--teal); color: white; border-color: var(--teal); }
+.mob-btn { width: 100%; padding: 14px; border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border: none; }
+.mob-btn-ghost { background: transparent; border: 1px solid var(--border-dark); color: var(--text-light); }
+.mob-btn-solid { background: var(--teal); color: white; }
+
+/* HERO */
+.hero { background: var(--navy); padding: 80px 56px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=40') center/cover; opacity: 0.07; }
+.hero-inner { position: relative; z-index: 1; max-width: 800px; }
+.hero-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.hero-eyebrow::before { content: '✦'; font-size: 10px; }
+.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 6vw, 72px); font-weight: 300; color: white; line-height: 1.05; margin-bottom: 20px; }
+.hero-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+.hero-sub { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.85; max-width: 580px; }
+
+/* BREADCRUMB */
+.breadcrumb { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 11px 56px; font-family: 'Jost', sans-serif; font-size: 11px; color: var(--text-muted); display: flex; gap: 8px; align-items: center; }
+.breadcrumb a { color: var(--text-light); }
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb .sep { color: var(--border-dark); }
+.breadcrumb .curr { color: var(--teal); }
+
+/* MAIN */
+.main { max-width: 1200px; margin: 0 auto; padding: 72px 56px; }
+
+/* ORIGIN STORY */
+.origin { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 88px; padding-bottom: 88px; border-bottom: 1px solid var(--border); }
+.origin-content {}
+.origin-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.origin-eyebrow::before { content: ''; width: 14px; height: 1px; background: var(--teal); display: inline-block; }
+.origin-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 46px); font-weight: 300; color: var(--text); line-height: 1.1; margin-bottom: 24px; }
+.origin-title em { font-style: italic; color: var(--teal); }
+.origin-text { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 300; color: var(--text-light); line-height: 1.95; margin-bottom: 18px; }
+.origin-text strong { color: var(--text); font-weight: 500; }
+.origin-quote { background: var(--navy); border-radius: 8px; padding: 24px 28px; margin-top: 28px; position: relative; }
+.origin-quote::before { content: '"'; font-family: 'Cormorant Garamond', serif; font-size: 80px; color: var(--gold); opacity: 0.3; position: absolute; top: -10px; left: 18px; line-height: 1; }
+.origin-quote-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: white; line-height: 1.6; position: relative; z-index: 1; }
+.origin-quote-author { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 12px; }
+
+.origin-visual { position: relative; }
+.origin-img-main { border-radius: 8px; overflow: hidden; height: 420px; }
+.origin-img-main img { width: 100%; height: 100%; object-fit: cover; }
+.origin-img-badge { position: absolute; bottom: -24px; right: -24px; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; box-shadow: var(--shadow-lg); text-align: center; }
+.origin-badge-num { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; color: var(--teal); line-height: 1; display: block; }
+.origin-badge-lbl { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+
+/* DUTCH EASTER EGG */
+.dutch-note { background: var(--gold-warm); border: 1px solid var(--border-warm); border-radius: 8px; padding: 20px 24px; margin: 32px 0; display: flex; gap: 14px; align-items: flex-start; }
+.dutch-flag { font-size: 28px; flex-shrink: 0; }
+.dutch-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; font-style: italic; color: var(--text); line-height: 1.6; }
+.dutch-sub { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; color: var(--text-muted); margin-top: 6px; }
+
+/* TEAM */
+.team-section { margin-bottom: 88px; padding-bottom: 88px; border-bottom: 1px solid var(--border); }
+.section-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.section-eyebrow::before { content: ''; width: 14px; height: 1px; background: var(--teal); display: inline-block; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 300; color: var(--text); margin-bottom: 48px; line-height: 1.1; }
+.section-title em { font-style: italic; color: var(--teal); }
+
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.team-card { background: white; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s; }
+.team-card:hover { box-shadow: var(--shadow-lg); }
+.team-img { height: 320px; overflow: hidden; position: relative; background: var(--cream); display: flex; align-items: center; justify-content: center; }
+.team-img img { width: 100%; height: 100%; object-fit: cover; }
+.team-img-placeholder { font-size: 80px; opacity: 0.3; }
+.team-badge { position: absolute; top: 16px; left: 16px; background: var(--navy); color: white; border-radius: 20px; padding: 5px 14px; font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+.team-body { padding: 28px 32px; }
+.team-role { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.team-name { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 300; color: var(--text); margin-bottom: 4px; }
+.team-age { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: var(--text-muted); margin-bottom: 18px; }
+.team-bio { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-light); line-height: 1.85; margin-bottom: 20px; }
+.team-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.team-tag { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; padding: 5px 12px; border-radius: 20px; background: var(--teal-pale); border: 1px solid var(--teal-pale2); color: var(--teal); }
+
+/* MISSION */
+.mission { background: var(--navy); border-radius: 10px; padding: 64px 56px; margin-bottom: 88px; position: relative; overflow: hidden; }
+.mission::before { content: ''; position: absolute; top: -40px; right: -40px; width: 300px; height: 300px; border-radius: 50%; background: rgba(196,151,78,0.06); }
+.mission-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.mission-eyebrow::before { content: '✦'; font-size: 10px; }
+.mission-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4.5vw, 54px); font-weight: 300; color: white; line-height: 1.1; margin-bottom: 32px; }
+.mission-title em { font-style: italic; color: rgba(255,255,255,0.45); }
+.mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.mission-item { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
+.mission-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+.mission-item-title { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: white; margin-bottom: 8px; }
+.mission-item-text { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+/* VALUES */
+.values-section { margin-bottom: 88px; padding-bottom: 88px; border-bottom: 1px solid var(--border); }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.value-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 8px; padding: 28px 24px; transition: border-color 0.2s, box-shadow 0.2s; }
+.value-card:hover { border-color: var(--teal); box-shadow: var(--shadow-sm); }
+.value-icon { font-size: 28px; margin-bottom: 14px; }
+.value-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin-bottom: 10px; }
+.value-text { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.8; }
+
+/* STATS */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 88px; }
+.stat { padding: 36px 28px; border-right: 1px solid var(--border); text-align: center; }
+.stat:last-child { border-right: none; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--teal); line-height: 1; display: block; margin-bottom: 6px; }
+.stat-lbl { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+
+/* CTA */
+.cta { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 56px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--text); margin-bottom: 10px; }
+.cta-title em { font-style: italic; color: var(--teal); }
+.cta-sub { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-light); line-height: 1.7; }
+.cta-buttons { display: flex; flex-direction: column; gap: 10px; }
+.cta-btn { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 28px; border-radius: 6px; cursor: pointer; border: none; transition: all 0.25s; white-space: nowrap; text-align: center; }
+.cta-btn-solid { background: var(--teal); color: white; }
+.cta-btn-solid:hover { background: var(--navy); }
+.cta-btn-ghost { background: transparent; border: 1px solid var(--border-dark); color: var(--text-light); }
+.cta-btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
+
+/* MOBILE */
+@media (max-width: 1100px) {
+  html { font-size: 17px; }
+  nav { padding: 0 20px; }
+  .hero { padding: 56px 20px; }
+  .breadcrumb { padding: 10px 20px; }
+  .main { padding: 48px 20px; }
+  .origin { grid-template-columns: 1fr; gap: 40px; }
+  .origin-img-badge { right: 0; bottom: -20px; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-img { height: 260px; }
+  .mission { padding: 40px 24px; }
+  .mission-grid { grid-template-columns: 1fr; gap: 20px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat { border-right: none; border-bottom: 1px solid var(--border); }
+  .stat:nth-child(odd) { border-right: 1px solid var(--border); }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+  .cta { grid-template-columns: 1fr; gap: 24px; }
+  .cta-buttons { flex-direction: row; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <a href="index.html" class="nav-logo">
+    Croatia <span class="nav-logo-premium">premium</span> Stay
+  </a>
+  <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <a href="owner-dashboard.html" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:inherit;text-decoration:none;padding:8px 16px;border:1px solid rgba(128,128,128,0.3);border-radius:6px;transition:all 0.2s;white-space:nowrap;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Prijava</a>
+    <a href="owner-add-property.html" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:white;text-decoration:none;padding:8px 18px;background:var(--teal);border-radius:6px;transition:all 0.2s;white-space:nowrap;" onmouseover="this.style.background='var(--navy)'" onmouseout="this.style.background='var(--teal)'">Oglasite objekt</a>
+  </div>
+  <button class="nav-wishlist" onclick="window.location.href='wishlist.html'">♡</button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="mob-link" onclick="toggleMenu()">Početna</a>
+  <a href="vile.html" class="mob-link" onclick="toggleMenu()">Vile & Apartmani</a>
+  <a href="iskustva.html" class="mob-link" onclick="toggleMenu()">Iskustva</a>
+  <a href="hoteli.html" class="mob-link" onclick="toggleMenu()">Boutique Hoteli</a>
+  <a href="moments.html" class="mob-link" onclick="toggleMenu()">CPS Moments</a>
+  <a href="o-nama.html" class="mob-link" onclick="toggleMenu()">O nama</a>
+  <div class="mob-actions">
+    <div class="mob-lang">
+      <button class="on">HR</button>
+      <button>EN</button>
+      <button>DE</button>
+    </div>
+    <button class="mob-btn mob-btn-ghost" onclick="window.location.href='owner-dashboard.html'">Prijava</button>
+    <button class="mob-btn mob-btn-solid" onclick="window.location.href='owner-add-property.html'">Oglasite objekt</button>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <a href="index.html">Početna</a><span class="sep">›</span>
+  <span class="curr">O nama</span>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- ORIGIN STORY -->
+  <div class="origin">
+    <div class="origin-content">
+      <p class="origin-eyebrow">Kako je sve počelo</p>
+      <h2 class="origin-title">Susjed koji je<br>lupao na vrata<br><em>promijenio je sve.</em></h2>
+
+      <p class="origin-text">
+        <strong>Ivana</strong> je vlasnica vile i agencije. Godinama je pratila kako se tržište mijenja — gosti sve više traže direktan kontakt, vlasnici sve više frustrirani posrednicima koji uzimaju 20-25% svake rezervacije. Imala je viziju. Trebala je suosnivača.
+      </p>
+      <p class="origin-text">
+        Pronašla ga je na najnepredvidiviji mogući način. Jedne ljetne večeri, njeni gosti — veseli <strong>Nizozemci</strong> koji su uživali u dalmatinskoj noći — bili su malo bučniji nego što je susjed mogao podnijeti. Dorijan je pokucao na vrata.
+      </p>
+      <p class="origin-text">
+        Umjesto svađe — razgovor. Umjesto problema — rješenje. Dorijan, 25 godina, developer koji je vidio prilike tamo gdje drugi vide prepreke, odmah je razumio što Ivana želi izgraditi. Te iste noći počeli su crtati prvu arhitekturu platforme.
+      </p>
+
+      <!-- DUTCH EASTER EGG -->
+      <div class="dutch-note">
+        <span class="dutch-flag">🇳🇱</span>
+        <div>
+          <div class="dutch-text">"Nikad nećete znati koliko ste doprinijeli ovom projektu. Hvala vam."</div>
+          <div class="dutch-sub">— Ivana & Dorijan, suosnivači LCR-a</div>
+        </div>
+      </div>
+
+      <div class="origin-quote">
+        <p class="origin-quote-text">Hrvatska zaslužuje platformu koja je prikazuje onako lijepo kao što ona stvarno jest. To nam je bio cilj od prvog dana.</p>
+        <div class="origin-quote-author">— Ivana, Co-founder & CEO</div>
+      </div>
+    </div>
+
+    <div class="origin-visual">
+      <div class="origin-img-main">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85"
+             alt="Hrvatska obala more Jadran luksuz" width="900" height="600" loading="lazy">
+      </div>
+      <div class="origin-img-badge">
+        <span class="origin-badge-num">200+</span>
+        <span class="origin-badge-lbl">verificiranih objekata</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num">200+</span>
+      <span class="stat-lbl">verificiranih objekata</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">0%</span>
+      <span class="stat-lbl">provizije za goste</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-lbl">jezika — HR, EN, DE</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4★+</span>
+      <span class="stat-lbl">samo premium objekti</span>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <div class="team-section">
+    <p class="section-eyebrow">Tim</p>
+    <h2 class="section-title">Dvoje ljudi.<br><em>Jedna vizija.</em></h2>
+
+    <div class="team-grid">
+
+      <!-- IVANA -->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=85"
+               alt="Ivana suosnivačica Croatia Premium Stay" width="600" height="400" loading="lazy">
+          <span class="team-badge">Co-founder & CEO</span>
+        </div>
+        <div class="team-body">
+          <div class="team-role">Suosnivačica · Vizija & Strategija</div>
+          <div class="team-name">Ivana</div>
+          <div class="team-age">38 godina · Split, Hrvatska</div>
+          <p class="team-bio">
+            Vlasnica vile i agencije s godinama iskustva u luksuznom turizmu. Pratila je kako se tržište mijenja i znala je da postoji bolji način. Njezina vizija bila je jasna: Hrvatska direktno, bez posrednika, bez kompromisa na kvaliteti.
+          </p>
+          <p class="team-bio">
+            Godinama je gradila odnose s vlasnicima vila i partnerima u turizmu. Kada je imala pravu platformu za realizaciju — pokrenula je LCR.
+          </p>
+          <div class="team-tags">
+            <span class="team-tag">Luksuzni turizam</span>
+            <span class="team-tag">Strategija</span>
+            <span class="team-tag">Villa management</span>
+            <span class="team-tag">Partnerstva</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DORIJAN -->
+      <div class="team-card">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=85"
+               alt="Dorijan suosnivač Croatia Premium Stay" width="600" height="400" loading="lazy">
+          <span class="team-badge">Co-founder & CTO</span>
+        </div>
+        <div class="team-body">
+          <div class="team-role">Suosnivač · Tehnologija & Produkt</div>
+          <div class="team-name">Dorijan</div>
+          <div class="team-age">25 godina · Split, Hrvatska</div>
+          <p class="team-bio">
+            Developer koji vidi prilike tamo gdje drugi vide prepreke. Kad je te ljetne večeri čuo Ivaninu viziju, odmah je znao kako je tehnički realizirati. Iste noći počeli su crtati arhitekturu onoga što će postati LCR.
+          </p>
+          <p class="team-bio">
+            Gradi platformu koja je brža, čišća i pametnija od svega što postoji na tržištu. SEO stroj, booking sustav, owner dashboard — sve njegovo.
+          </p>
+          <div class="team-tags">
+            <span class="team-tag">Full-stack dev</span>
+            <span class="team-tag">Product design</span>
+            <span class="team-tag">SEO arhitektura</span>
+            <span class="team-tag">Supabase & Stripe</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <div class="mission">
+    <p class="mission-eyebrow">Naša misija</p>
+    <h2 class="mission-title">Hrvatska kakva<br><em>zaista jest.</em></h2>
+    <div class="mission-grid">
+      <div class="mission-item">
+        <div class="mission-num">01</div>
+        <div class="mission-item-title">Direktno</div>
+        <p class="mission-item-text">Gost i vlasnik komuniciraju direktno. Bez posrednika koji uzimaju 20% svake transakcije. Novac ostaje kod vlasnika, gost dobiva bolju cijenu.</p>
+      </div>
+      <div class="mission-item">
+        <div class="mission-num">02</div>
+        <div class="mission-item-title">Verificirano</div>
+        <p class="mission-item-text">Svaki objekt osobno verificiramo. Samo 4 i 5-zvjezdični standard. Nema kompromisa na kvaliteti — ako nije dovoljno dobro za nas, nije ni za naše goste.</p>
+      </div>
+      <div class="mission-item">
+        <div class="mission-num">03</div>
+        <div class="mission-item-title">Autentično</div>
+        <p class="mission-item-text">Hrvatska je previše lijepa da bi je prikazivali generičkim fotografijama i marketinškim kliše frazama. Prikazujemo je onakvom kakva stvarno jest.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="values-section">
+    <p class="section-eyebrow">Naše vrijednosti</p>
+    <h2 class="section-title">Zašto smo <em>drugačiji.</em></h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3 class="value-title">Transparentnost</h3>
+        <p class="value-text">Nema skrivenih naknada, nema iznenađenja. Cijena koju vidite je cijena koju plaćate — plus jasno naznačeni payment processing fee od 3%.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">👑</div>
+        <h3 class="value-title">Premium standard</h3>
+        <p class="value-text">Radimo s vlasnicima koji dijele našu opsesiju kvalitetom. Svaki objekt, svako iskustvo, svaki partner — pažljivo odabrani.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌊</div>
+        <h3 class="value-title">Ljubav prema Hrvatskoj</h3>
+        <p class="value-text">Nismo platforma koja slučajno radi s Hrvatskom. Hrvatska je razlog zbog kojeg postoji LCR. Prikazujemo je najboljim mogućim očima.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3 class="value-title">Brzina & jednostavnost</h3>
+        <p class="value-text">Booking za 3 minute. Upload vile za 20 minuta. Tehnologija koja radi za ljude, ne obrnuto.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <h3 class="value-title">Sigurnost</h3>
+        <p class="value-text">Stripe plaćanje, verificirani vlasnici, zaštićeni podaci. Gost i vlasnik mogu se osloniti na nas bez brige.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌱</div>
+        <h3 class="value-title">Dugoročni odnosi</h3>
+        <p class="value-text">Ne tražimo jednokratne transakcije. Gradimo odnose s vlasnicima i gostima koji se vraćaju — jer Hrvatska zaslužuje stalne ljubitelje.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <div>
+      <h2 class="cta-title">Pridružite se<br><em>našoj priči.</em></h2>
+      <p class="cta-sub">Vlasnici vila — oglasite objekt direktno i zadržite punu zaradu.<br>Gosti — pronađite vilu ili iskustvo direktno od vlasnika.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="vile.html" class="cta-btn cta-btn-solid">Istražite vile →</a>
+      <a href="#" class="cta-btn cta-btn-ghost">Oglasite objekt</a>
+    </div>
+  </div>
+
+</main>
+
+<script>
+function toggleMenu() {
+  const h = document.getElementById('hamburger');
+  const d = document.getElementById('mobileDrawer');
+  h.classList.toggle('open');
+  d.classList.toggle('open');
+  document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }, i * 100);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.team-card, .value-card, .mission-item, .stat').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+</script>
+
+</body>
+</html>
+HTMLEOF

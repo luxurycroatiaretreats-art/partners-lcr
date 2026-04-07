@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPS Moments – Priče, Destinacije & Tips iz Hrvatske | Croatia Premium Stay</title>
+<meta name="description" content="Priče vlasnika vila, iskustva gostiju, vodiči za destinacije i brzi tips o Hrvatskoj. Split, Hvar, Dubrovnik, Pelješac.">
+<link rel="canonical" href="https://croatiapremiustay.com/hr/moments/">
+<link rel="alternate" hreflang="hr" href="https://croatiapremiustay.com/hr/moments/">
+<link rel="alternate" hreflang="en" href="https://croatiapremiustay.com/en/moments/">
+<link rel="alternate" hreflang="de" href="https://croatiapremiustay.com/de/moments/">
+<link rel="alternate" hreflang="x-default" href="https://croatiapremiustay.com/en/moments/">
+<meta name="theme-color" content="#115571">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "CPS Moments",
+  "description": "Priče, destinacije i tips iz luksuzne Hrvatske",
+  "url": "https://croatiapremiustay.com/hr/moments/",
+  "publisher": {"@type": "Organization", "name": "Croatia Premium Stay", "url": "https://croatiapremiustay.com"},
+  "inLanguage": ["hr", "en", "de"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0A2535; --teal: #115571; --teal-pale: #E8F4F8; --teal-pale2: #D0E8F0;
+  --gold: #C4974E; --gold-pale: #FDF6E8; --gold-warm: #F0E8D5;
+  --white: #fff; --cream: #F7F5F1; --off-white: #FAFAFA;
+  --border: #E2EEF2; --border-dark: #C8DDE4; --border-warm: #DDD0B8;
+  --text: #0F1E24; --text-light: #5A7880; --text-muted: #8AA8B0;
+  --shadow-sm: 0 1px 12px rgba(10,37,53,0.06);
+  --shadow: 0 4px 24px rgba(10,37,53,0.10);
+  --shadow-lg: 0 12px 48px rgba(10,37,53,0.14);
+}
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: white; color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 200; height: 64px; background: rgba(255,255,255,0.97); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 400;
+  color: var(--teal); letter-spacing: 0.06em;
+  text-decoration: none; flex-shrink: 0;
+  display: flex; align-items: baseline; gap: 5px;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.75; }
+.nav-logo-premium {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: none; padding: 6px; flex-shrink: 0; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--teal); border-radius: 2px; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-wishlist { display: flex; align-items: center; gap: 5px; font-family: 'Jost', sans-serif; font-size: 12px; color: var(--text-light); cursor: pointer; background: transparent; border: none; padding: 6px 10px; border-radius: 6px; transition: color 0.2s; flex-shrink: 0; position: relative; }
+.nav-wishlist:hover { color: var(--teal); }
+.nav-wishlist-count { background: var(--teal); color: white; border-radius: 50%; width: 16px; height: 16px; font-size: 9px; font-weight: 600; display: none; align-items: center; justify-content: center; position: absolute; top: 2px; right: 2px; }
+.nav-wishlist-count.show { display: flex; }
+.mobile-drawer { display: flex; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: white; z-index: 199; padding: 28px 24px; flex-direction: column; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94); overflow-y: auto; }
+.mobile-drawer.open { transform: translateX(0); }
+.mob-link { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--border); display: block; }
+.mob-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.mob-lang { display: flex; gap: 8px; }
+.mob-lang button { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-light); background: white; cursor: pointer; }
+.mob-lang button.on { background: var(--teal); color: white; border-color: var(--teal); }
+.mob-btn { width: 100%; padding: 14px; border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border: none; }
+.mob-btn-ghost { background: transparent; border: 1px solid var(--border-dark); color: var(--text-light); }
+.mob-btn-solid { background: var(--teal); color: white; }
+
+/* PAGE HEADER */
+.page-header { background: var(--navy); padding: 56px 56px 0; position: relative; overflow: hidden; }
+.page-header::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=40') center/cover; opacity: 0.08; }
+.ph-inner { position: relative; z-index: 1; max-width: 700px; }
+.ph-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.ph-eyebrow::before { content: '✦'; font-size: 10px; }
+.ph-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 6vw, 64px); font-weight: 300; color: white; line-height: 1.05; margin-bottom: 12px; }
+.ph-title em { font-style: italic; color: rgba(255,255,255,0.55); }
+.ph-sub { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.55); margin-bottom: 40px; line-height: 1.7; }
+
+/* LANG SWITCH */
+.lang-switch { display: flex; gap: 4px; margin-bottom: 40px; }
+.lang-btn { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; padding: 7px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); cursor: pointer; background: transparent; transition: all 0.2s; }
+.lang-btn.on { background: white; color: var(--teal); border-color: white; font-weight: 500; }
+.lang-btn:hover { border-color: rgba(255,255,255,0.5); color: rgba(255,255,255,0.9); }
+
+/* FILTER BAR */
+.filter-bar { background: white; border-bottom: 1px solid var(--border); padding: 0 56px; position: sticky; top: 64px; z-index: 100; box-shadow: var(--shadow-sm); }
+.filter-bar-inner { display: flex; align-items: stretch; height: 56px; overflow-x: auto; scrollbar-width: none; }
+.filter-bar-inner::-webkit-scrollbar { display: none; }
+
+/* TYPE TABS */
+.type-tab { display: flex; align-items: center; gap: 7px; padding: 0 22px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); cursor: pointer; border: none; background: transparent; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; flex-shrink: 0; }
+.type-tab:hover { color: var(--teal); }
+.type-tab.on { color: var(--teal); border-bottom-color: var(--teal); font-weight: 500; }
+.type-tab-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dot-owner { background: var(--gold); }
+.dot-guest { background: #22C55E; }
+.dot-dest { background: var(--teal); }
+.dot-tips { background: #E24B4A; }
+
+/* DEST SELECT */
+.dest-wrap { display: flex; align-items: center; gap: 10px; padding: 0 22px; border-left: 1px solid var(--border); flex-shrink: 0; margin-left: auto; }
+.dest-label { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); white-space: nowrap; }
+.dest-select { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text); border: none; outline: none; background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238AA8B0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 0 center; padding-right: 18px; cursor: pointer; appearance: none; }
+
+/* SEARCH BAR */
+.search-bar { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 12px 56px; display: flex; align-items: center; gap: 12px; }
+.search-input { flex: 1; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 10px 16px; background: white; outline: none; transition: border-color 0.2s; max-width: 480px; }
+.search-input:focus { border-color: var(--teal); }
+.search-input::placeholder { color: var(--text-muted); }
+.search-count { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: var(--text-muted); }
+.search-count strong { color: var(--text); font-weight: 500; }
+
+/* ACTIVE FILTERS */
+.active-filters { padding: 10px 56px; background: white; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.active-filters.hidden { display: none; }
+.af-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--teal-pale); border: 1px solid var(--teal-pale2); border-radius: 20px; padding: 5px 12px; font-family: 'Jost', sans-serif; font-size: 11px; color: var(--teal); }
+.af-remove { cursor: pointer; font-size: 14px; color: var(--text-muted); background: none; border: none; padding: 0; line-height: 1; }
+.af-clear { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; color: var(--text-muted); cursor: pointer; background: none; border: none; margin-left: auto; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* BREADCRUMB */
+.breadcrumb { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 11px 56px; font-family: 'Jost', sans-serif; font-size: 11px; color: var(--text-muted); display: flex; gap: 8px; align-items: center; }
+.breadcrumb a { color: var(--text-light); }
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb .sep { color: var(--border-dark); }
+.breadcrumb .curr { color: var(--teal); font-weight: 400; }
+
+/* MAIN */
+.main { padding: 48px 56px; max-width: 1400px; margin: 0 auto; }
+
+/* FEATURED STORY — HERO */
+.featured-story { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0; border-radius: 10px; overflow: hidden; margin-bottom: 56px; cursor: pointer; box-shadow: var(--shadow); transition: box-shadow 0.35s; }
+.featured-story:hover { box-shadow: var(--shadow-lg); }
+.fs-img { position: relative; overflow: hidden; min-height: 440px; }
+.fs-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+.featured-story:hover .fs-img img { transform: scale(1.04); }
+.fs-body { background: var(--navy); padding: 44px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+.fs-tag { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+.fs-tag-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.fs-tag-text { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+.fs-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3vw, 38px); font-weight: 300; color: white; line-height: 1.2; margin-bottom: 16px; }
+.fs-excerpt { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.85; margin-bottom: 28px; }
+.fs-meta { display: flex; align-items: center; gap: 16px; }
+.fs-author { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.5); }
+.fs-read { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 6px; margin-left: auto; }
+.fs-dest { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 5px 12px; font-family: 'Jost', sans-serif; font-size: 10px; color: rgba(255,255,255,0.7); margin-bottom: 16px; align-self: flex-start; }
+
+/* SECTION TITLES */
+.section-title { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.section-title-line { flex: 1; height: 1px; background: var(--border); }
+.section-title-text { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+.section-title-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* STORIES GRID */
+.stories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 56px; }
+
+.story-card { background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s, border-color 0.2s; opacity: 0; transform: translateY(20px); }
+.story-card.visible { opacity: 1; transform: translateY(0); }
+.story-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--border-dark); }
+
+.sc-img { height: 200px; overflow: hidden; position: relative; }
+.sc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.story-card:hover .sc-img img { transform: scale(1.06); }
+
+.sc-tag { position: absolute; top: 14px; left: 14px; display: flex; align-items: center; gap: 6px; background: rgba(10,37,53,0.85); border-radius: 20px; padding: 5px 11px; backdrop-filter: blur(4px); }
+.sc-tag-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.sc-tag-text { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: white; }
+.sc-dest-badge { position: absolute; bottom: 12px; left: 14px; background: rgba(255,255,255,0.92); border-radius: 20px; padding: 4px 10px; font-family: 'Jost', sans-serif; font-size: 10px; color: var(--text); font-weight: 400; }
+
+.sc-body { padding: 20px 22px 24px; }
+.sc-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); line-height: 1.25; margin-bottom: 10px; }
+.sc-excerpt { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.75; margin-bottom: 16px; }
+.sc-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); }
+.sc-author { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; color: var(--text-muted); }
+.sc-read { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); }
+
+/* ================================
+   TIPS SECTION
+================================ */
+.tips-section { background: var(--navy); border-radius: 10px; padding: 40px; margin-bottom: 56px; }
+.tips-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; }
+.tips-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.tips-eyebrow::before { content: '⚡'; font-size: 12px; }
+.tips-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: white; line-height: 1.1; }
+.tips-title em { font-style: italic; color: rgba(255,255,255,0.55); }
+.tips-subtitle { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.5); margin-top: 6px; }
+.tips-dest-filter { display: flex; gap: 8px; flex-wrap: wrap; }
+.tips-dest-btn { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6); cursor: pointer; background: transparent; transition: all 0.2s; }
+.tips-dest-btn.on, .tips-dest-btn:hover { background: white; color: var(--teal); border-color: white; }
+
+/* ACCORDION */
+.tips-accordion { display: flex; flex-direction: column; gap: 8px; }
+.acc-item { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; transition: border-color 0.2s; }
+.acc-item.open { border-color: var(--gold); }
+.acc-header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; background: rgba(255,255,255,0.05); border: none; cursor: pointer; transition: background 0.2s; text-align: left; gap: 16px; }
+.acc-header:hover { background: rgba(255,255,255,0.09); }
+.acc-item.open .acc-header { background: rgba(255,255,255,0.08); }
+.acc-left { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
+.acc-icon { font-size: 20px; flex-shrink: 0; }
+.acc-category { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+.acc-preview { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.5); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.acc-item.open .acc-preview { display: none; }
+.acc-right { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.acc-dest { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.4); white-space: nowrap; }
+.acc-arrow { font-size: 20px; color: var(--gold); font-weight: 300; transition: transform 0.3s; line-height: 1; width: 20px; text-align: center; }
+.acc-item.open .acc-arrow { transform: rotate(45deg); }
+.acc-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
+.acc-item.open .acc-body { max-height: 200px; }
+.acc-text { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.8); line-height: 1.8; padding: 16px 20px 20px 54px; }
+
+/* DESTINATION STORIES */
+.dest-section { margin-bottom: 56px; }
+.dest-tabs { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.dest-tab { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 18px; border-radius: 20px; border: 1px solid var(--border); color: var(--text-light); cursor: pointer; background: white; transition: all 0.2s; }
+.dest-tab:hover { border-color: var(--teal); color: var(--teal); }
+.dest-tab.on { background: var(--teal); color: white; border-color: var(--teal); font-weight: 500; }
+
+.dest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.dest-card { border-radius: 8px; overflow: hidden; position: relative; cursor: pointer; min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end; transition: box-shadow 0.35s; }
+.dest-card:hover { box-shadow: var(--shadow-lg); }
+.dest-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+.dest-card:hover img { transform: scale(1.04); }
+.dest-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,37,53,0.95) 0%, rgba(10,37,53,0.1) 60%); }
+.dest-card-content { position: relative; z-index: 1; padding: 24px; }
+.dest-card-tag { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.dest-card-tag::before { content: '✦'; font-size: 8px; }
+.dest-card-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: white; line-height: 1.2; margin-bottom: 8px; }
+.dest-card-meta { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.55); }
+
+/* NEWSLETTER */
+.newsletter { background: var(--gold-warm); border: 1px solid var(--border-warm); border-radius: 10px; padding: 40px; display: flex; justify-content: space-between; align-items: center; gap: 32px; margin-bottom: 56px; flex-wrap: wrap; }
+.nl-content {}
+.nl-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.nl-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text); margin-bottom: 6px; }
+.nl-sub { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text-light); }
+.nl-form { display: flex; gap: 8px; flex-shrink: 0; }
+.nl-input { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text); border: 1px solid var(--border-warm); border-radius: 6px; padding: 12px 18px; background: white; outline: none; width: 260px; transition: border-color 0.2s; }
+.nl-input:focus { border-color: var(--teal); }
+.nl-btn { background: var(--teal); color: white; border: none; border-radius: 6px; padding: 12px 24px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.25s; white-space: nowrap; }
+.nl-btn:hover { background: var(--navy); }
+
+/* PAGINATION */
+.pagination { display: flex; justify-content: center; align-items: center; gap: 6px; padding-top: 40px; border-top: 1px solid var(--border); }
+.pg-btn { width: 40px; height: 40px; border-radius: 6px; border: 1px solid var(--border); background: white; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-light); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.pg-btn:hover { border-color: var(--teal); color: var(--teal); }
+.pg-btn.on { background: var(--teal); color: white; border-color: var(--teal); font-weight: 500; }
+
+/* MOBILE */
+@media (max-width: 1100px) {
+  html { font-size: 17px; }
+  nav { padding: 0 20px; }
+  .page-header { padding: 40px 20px 0; }
+  .filter-bar { padding: 0 0; top: 64px; }
+  .search-bar { padding: 12px 20px; }
+  .active-filters { padding: 10px 20px; }
+  .breadcrumb { padding: 10px 20px; }
+  .main { padding: 28px 20px; }
+  .featured-story { grid-template-columns: 1fr; }
+  .fs-img { min-height: 260px; }
+  .fs-body { padding: 28px 24px; }
+  .stories-grid { grid-template-columns: 1fr; }
+  .tips-section { padding: 28px 20px; }
+  .acc-text { padding: 14px 16px 18px 16px; }
+  .tips-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tips-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .dest-grid { grid-template-columns: 1fr; }
+  .newsletter { flex-direction: column; gap: 20px; }
+  .nl-form { flex-direction: column; width: 100%; }
+  .nl-input { width: 100%; }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+  .stories-grid { grid-template-columns: 1fr 1fr; }
+  .tips-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <a href="index.html" class="nav-logo">
+    Croatia <span class="nav-logo-premium">premium</span> Stay
+  </a>
+  <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <a href="owner-dashboard.html" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:inherit;text-decoration:none;padding:8px 16px;border:1px solid rgba(128,128,128,0.3);border-radius:6px;transition:all 0.2s;white-space:nowrap;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Prijava</a>
+    <a href="owner-add-property.html" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:white;text-decoration:none;padding:8px 18px;background:var(--teal);border-radius:6px;transition:all 0.2s;white-space:nowrap;" onmouseover="this.style.background='var(--navy)'" onmouseout="this.style.background='var(--teal)'">Oglasite objekt</a>
+  </div>
+  <button class="nav-wishlist" onclick="window.location.href='wishlist.html'">♡<span class="nav-wishlist-count" id="wishlist-count">0</span></button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="mob-link" onclick="toggleMenu()">Početna</a>
+  <a href="vile.html" class="mob-link" onclick="toggleMenu()">Vile & Apartmani</a>
+  <a href="iskustva.html" class="mob-link" onclick="toggleMenu()">Iskustva</a>
+  <a href="hoteli.html" class="mob-link" onclick="toggleMenu()">Boutique Hoteli</a>
+  <a href="moments.html" class="mob-link" onclick="toggleMenu()">CPS Moments</a>
+  <a href="o-nama.html" class="mob-link" onclick="toggleMenu()">O nama</a>
+  <div class="mob-actions">
+    <div class="mob-lang">
+      <button class="on">HR</button>
+      <button>EN</button>
+      <button>DE</button>
+    </div>
+    <button class="mob-btn mob-btn-ghost" onclick="window.location.href='owner-dashboard.html'">Prijava</button>
+    <button class="mob-btn mob-btn-solid" onclick="window.location.href='owner-add-property.html'">Oglasite objekt</button>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <a href="index.html">Početna</a><span class="sep">›</span>
+  <span class="curr">CPS Moments</span>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- FEATURED STORY -->
+  <article class="featured-story" data-type="vlasnik" data-dest="peljesac" onclick="window.location.href='#'">
+    <div class="fs-img">
+      <img src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=900&q=85"
+           alt="Priča vlasnika Villa Korta Katarina Pelješac CPS Moments"
+           width="900" height="600" fetchpriority="high">
+    </div>
+    <div class="fs-body">
+      <div>
+        <div class="fs-tag">
+          <div class="fs-tag-dot dot-owner"></div>
+          <span class="fs-tag-text">Priča vlasnika</span>
+        </div>
+        <div class="fs-dest">📍 Pelješac</div>
+        <h2 class="fs-title">"Zašto smo napustili Booking.com i nikad se nismo osvrnuli"</h2>
+        <p class="fs-excerpt">Ana i Ivan Kovač gradili su svoju vilu 12 godina. Kad su je konačno otvorili za goste, Booking.com im je uzeo 20% svake rezervacije. Prije tri godine odlučili su stati. Ovo je njihova priča.</p>
+      </div>
+      <div class="fs-meta">
+        <span class="fs-author">Ana Kovač · Villa Korta Katarina · 8 min čitanja</span>
+        <span class="fs-read">Čitaj → </span>
+      </div>
+    </div>
+  </article>
+
+  <!-- OWNER STORIES -->
+  <div class="section-title">
+    <div class="section-title-dot dot-owner"></div>
+    <span class="section-title-text">Priče vlasnika</span>
+    <div class="section-title-line"></div>
+  </div>
+
+  <div class="stories-grid" id="storiesGrid">
+
+    <article class="story-card" data-type="vlasnik" data-dest="split" onclick="window.location.href='#'">
+      <div class="sc-img">
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=700&q=85"
+             alt="Villa Naaria Split priča vlasnice" width="700" height="467" loading="lazy">
+        <div class="sc-tag"><div class="sc-tag-dot dot-owner"></div><span class="sc-tag-text">Priča vlasnika</span></div>
+        <span class="sc-dest-badge">📍 Split</span>
+      </div>
+      <div class="sc-body">
+        <h3 class="sc-title">"Moja vila je moja priča — i sad je dijelim s gostima iz cijelog svijeta"</h3>
+        <p class="sc-excerpt">Marina Perić nikad nije planirala biti domaćica. Naslijedila je vilu od bake i transformirala je u luksuzno odredište.</p>
+        <div class="sc-footer">
+          <span class="sc-author">Marina Perić · 5 min</span>
+          <span class="sc-read">Čitaj →</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story-card" data-type="gost" data-dest="hvar" onclick="window.location.href='#'">
+      <div class="sc-img">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=85"
+             alt="Priča gosta Hvar villa odmor obitelj" width="700" height="467" loading="lazy">
+        <div class="sc-tag"><div class="sc-tag-dot dot-guest"></div><span class="sc-tag-text">Priča gosta</span></div>
+        <span class="sc-dest-badge">📍 Hvar</span>
+      </div>
+      <div class="sc-body">
+        <h3 class="sc-title">"Tjedan na Hvaru koji je promijenio kako putujemo"</h3>
+        <p class="sc-excerpt">Familie Schmidt iz Münchena tražila je savršenu obiteljsku vilu. Pronašla je više od toga — pronašla je Hrvatsku.</p>
+        <div class="sc-footer">
+          <span class="sc-author">Familie Schmidt · 6 min</span>
+          <span class="sc-read">Čitaj →</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story-card" data-type="destinacija" data-dest="dubrovnik" onclick="window.location.href='#'">
+      <div class="sc-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"
+             alt="Dubrovnik vodič luksuz destinacija" width="700" height="467" loading="lazy">
+        <div class="sc-tag"><div class="sc-tag-dot dot-dest"></div><span class="sc-tag-text">Destinacija</span></div>
+        <span class="sc-dest-badge">📍 Dubrovnik</span>
+      </div>
+      <div class="sc-body">
+        <h3 class="sc-title">Dubrovnik izvan turista — tajni kutci koje znaju samo lokalni</h3>
+        <p class="sc-excerpt">Znate li da postoji plaža dostupna samo pješice 20 minuta od zidina? Ili restoran bez šilte koji Dubrovčani čuvaju za sebe?</p>
+        <div class="sc-footer">
+          <span class="sc-author">LCR Editorial · 7 min</span>
+          <span class="sc-read">Čitaj →</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story-card" data-type="gost" data-dest="split" onclick="window.location.href='#'">
+      <div class="sc-img">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85"
+             alt="Večera Zrno Soli Split iskustvo gosta" width="700" height="467" loading="lazy">
+        <div class="sc-tag"><div class="sc-tag-dot dot-guest"></div><span class="sc-tag-text">Priča gosta</span></div>
+        <span class="sc-dest-badge">📍 Split</span>
+      </div>
+      <div class="sc-body">
+        <h3 class="sc-title">"Večera u Zrno Soli — večer o kojoj i dalje pričamo"</h3>
+        <p class="sc-excerpt">James i Sarah iz Londona nisu planirali posebnu večeru. LCR tim im je predložio Zrno Soli. Sada ga preporučuju svima.</p>
+        <div class="sc-footer">
+          <span class="sc-author">James & Sarah · London · 4 min</span>
+          <span class="sc-read">Čitaj →</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story-card" data-type="destinacija" data-dest="split" onclick="window.location.href='#'">
+      <div class="sc-img">
+        <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=700&q=85"
+             alt="Split vodič destinacija Dioklecijanova palača" width="700" height="467" loading="lazy">
+        <div class="sc-tag"><div class="sc-tag-dot dot-dest"></div><span class="sc-tag-text">Destinacija</span></div>
+        <span class="sc-dest-badge">📍 Split</span>
+      </div>
+      <div class="sc-body">
+        <h3 class="sc-title">Split — grad koji živi unutar palače stare 1.700 godina</h3>
+        <p class="sc-excerpt">Dioklecijanova palača nije muzej — to je živi grad. Ovdje ćete naći restorane, barove, hotele i stanove unutar rimskih zidova.</p>
+        <div class="sc-footer">
+          <span class="sc-author">LCR Editorial · 8 min</span>
+          <span class="sc-read">Čitaj →</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story-card" data-type="vlasnik" data-dest="brac" onclick="window.location.href='#'">
+      <div class="sc-img">
+        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=700&q=85"
+             alt="Villa Brač priča vlasnika otok more" width="700" height="467" loading="lazy">
+        <div class="sc-tag"><div class="sc-tag-dot dot-owner"></div><span class="sc-tag-text">Priča vlasnika</span></div>
+        <span class="sc-dest-badge">📍 Brač</span>
+      </div>
+      <div class="sc-body">
+        <h3 class="sc-title">"Gradili smo vilu 7 godina. Svaki kamen smo sami birali."</h3>
+        <p class="sc-excerpt">Obitelj Marić iz Splita odlučila je sagraditi vilu na Braču od autohtonog kamena brača. Projekt koji je trajao sedam godina.</p>
+        <div class="sc-footer">
+          <span class="sc-author">Obitelj Marić · 6 min</span>
+          <span class="sc-read">Čitaj →</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- TIPS & FACTS SECTION -->
+  <div class="tips-section" id="tipsSection">
+    <div class="tips-header">
+      <div>
+        <p class="tips-eyebrow">Brze informacije · Bez dugih tekstova</p>
+        <h2 class="tips-title">Tips & <em>Facts</em></h2>
+        <p class="tips-subtitle">Sve što trebate znati u jednoj rečenici.</p>
+      </div>
+      <div class="tips-dest-filter">
+        <button class="tips-dest-btn on" onclick="filterTips(this,'sve')">Sve</button>
+        <button class="tips-dest-btn" onclick="filterTips(this,'split')">Split</button>
+        <button class="tips-dest-btn" onclick="filterTips(this,'dubrovnik')">Dubrovnik</button>
+        <button class="tips-dest-btn" onclick="filterTips(this,'hvar')">Hvar</button>
+        <button class="tips-dest-btn" onclick="filterTips(this,'peljesac')">Pelješac</button>
+      </div>
+    </div>
+
+    <div class="tips-accordion" id="tipsAccordion">
+
+      <div class="acc-item" data-dest="split">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🚢</span>
+            <div>
+              <div class="acc-category">Prijevoz · Split</div>
+              <div class="acc-preview">Ferry za Hvar ide svakih 60-90 minuta...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Split</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Ferry za Hvar ide svakih 60-90 minuta iz splitske rive. Ljeti rezervirajte barem dan unaprijed — u srpnju i kolovozu redovi mogu biti dugi i do 2 sata.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="dubrovnik">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🕗</span>
+            <div>
+              <div class="acc-category">Timing · Dubrovnik</div>
+              <div class="acc-preview">Gradske zidine — idite u 7 ujutro...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Dubrovnik</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Gradske zidine — idite u 7 ujutro ili sat prije zatvaranja. Sredinom dana temperatura je 40°C i gužva je ogromna. Ulaznica vrijedi cijeli dan — možete ući ujutro i vratiti se navečer.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="hvar">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🍷</span>
+            <div>
+              <div class="acc-category">Vino · Hvar</div>
+              <div class="acc-preview">Plavac Mali — 14-16% alkohola...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Hvar</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Plavac Mali s Hvara jedan je od najjačih hrvatskih vina — 14-16% alkohola. Uvijek ga pijte uz hranu. Bijelo vino za ljetnih dana? Tražite Pošip s Korčule ili Grk s Lumbarde — osvježavajuće i suho.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="peljesac">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🦪</span>
+            <div>
+              <div class="acc-category">Hrana · Pelješac</div>
+              <div class="acc-preview">Stonske kamenice — EU certificirane...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Pelješac</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Stonske kamenice su jedine EU certificirane kamenice s hranjivim dnom — rastu u čistom ušću rijeke Neretve. Jedu se žive, s limunom ili bez ičega. Cijena direktno od uzgajivača: 6-8 kamenica za 5€.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="split">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">💶</span>
+            <div>
+              <div class="acc-category">Novac · Hrvatska</div>
+              <div class="acc-preview">Euro od 2023. — kartice svugdje...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Hrvatska</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Hrvatska je u Eurozoni od 2023. Kartice se prihvaćaju gotovo svugdje — restorani, tržnice, taxi. Gotovinu trebate samo na manjim ribarskim tržnicama ili kod starijih lokalnih prodavača.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="hvar">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">☀️</span>
+            <div>
+              <div class="acc-category">Klima · Hvar</div>
+              <div class="acc-preview">2.726 sunčanih sati — više od Barcelone...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Hvar</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Hvar je najsunčanije mjesto u Hrvatskoj i jedno od najsunčanijih u Europi — 2.726 sunčanih sati godišnje. Više od Barcelone i Nica. Čak i u listopadu more je 22°C i sunčano.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="dubrovnik">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🎬</span>
+            <div>
+              <div class="acc-category">Kultura · Dubrovnik</div>
+              <div class="acc-preview">Game of Thrones — Željezno prijestolje...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Dubrovnik</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Više od 50% snimanja Game of Thronesa snimljeno je u Dubrovniku. Željezno prijestolje — Kneževski dvor. Meereen — Ulica od Puča. Blackwater — Gradske zidine. Postoje organizirane GOT ture, ali lokalni vodiči su bolji i jeftiniji.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="split">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🌊</span>
+            <div>
+              <div class="acc-category">More · Hrvatska</div>
+              <div class="acc-preview">Vidljivost do 50 metara — temperatura 26-28°C...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Hrvatska</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Jadransko more je jedno od najčišćih u Europi — vidljivost do 50 metara dubine. Temperatura ljeti 26-28°C. Razlog: nema industrijskih rijeka koje utječu u Jadran na hrvatskoj strani.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="split">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🏛️</span>
+            <div>
+              <div class="acc-category">Povijest · Split</div>
+              <div class="acc-preview">Dioklecijanova palača — živi grad...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Split</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Dioklecijanova palača nije muzej — to je živi grad. Unutar 4. stoljetnih zidova živi 3.000 ljudi. Tu su restorani, barovi, stanovi, galerije. Kad uđete — niste u muzeju, šetate kroz dnevni život Splićana.</p>
+        </div>
+      </div>
+
+      <div class="acc-item" data-dest="brac">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-left">
+            <span class="acc-icon">🏖️</span>
+            <div>
+              <div class="acc-category">Plaža · Brač</div>
+              <div class="acc-preview">Zlatni Rat — jedina plaža koja mijenja oblik...</div>
+            </div>
+          </div>
+          <div class="acc-right">
+            <span class="acc-dest">📍 Brač</span>
+            <span class="acc-arrow">+</span>
+          </div>
+        </button>
+        <div class="acc-body">
+          <p class="acc-text">Zlatni Rat kod Bola je jedina plaža na Mediteranu koja mijenja oblik ovisno o vjetru i morskim strujama. Ljeti dolazi 15.000 posjetitelja dnevno — dođite prije 9 ili poslije 18h za mir. Vjetar maestral čini je savršenom za windsurfing.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DESTINATION STORIES -->
+  <div class="dest-section" id="destSection">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:24px;">
+      <div>
+        <p style="font-family:'Jost',sans-serif; font-size:10px; font-weight:600; letter-spacing:0.38em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; display:flex; align-items:center; gap:10px;">
+          <span style="width:14px; height:1px; background:var(--teal); display:inline-block;"></span>
+          Destinacijski vodiči
+        </p>
+        <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(26px,3.5vw,40px); font-weight:300; color:var(--text);">Otkrijte <em style="font-style:italic; color:var(--teal);">Hrvatsku.</em></h2>
+      </div>
+    </div>
+
+    <div class="dest-tabs">
+      <button class="dest-tab on" onclick="filterDestStories(this,'sve')">Sve destinacije</button>
+      <button class="dest-tab" onclick="filterDestStories(this,'split')">Split</button>
+      <button class="dest-tab" onclick="filterDestStories(this,'dubrovnik')">Dubrovnik</button>
+      <button class="dest-tab" onclick="filterDestStories(this,'hvar')">Hvar</button>
+      <button class="dest-tab" onclick="filterDestStories(this,'peljesac')">Pelješac</button>
+      <button class="dest-tab" onclick="filterDestStories(this,'brac')">Brač</button>
+    </div>
+
+    <div class="dest-grid" id="destGrid">
+      <article class="dest-card" data-dest="split" onclick="window.location.href='#'">
+        <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=800&q=85" alt="Split Dalmacija vodič" loading="lazy" width="800" height="533">
+        <div class="dest-card-overlay"></div>
+        <div class="dest-card-content">
+          <div class="dest-card-tag">Destinacijski vodič · 8 min</div>
+          <h3 class="dest-card-title">Split — kompletan vodič za luksuzne goste</h3>
+          <div class="dest-card-meta">Restorani · Plaže · Iskustva · Prijevoz · Tips</div>
+        </div>
+      </article>
+      <article class="dest-card" data-dest="hvar" onclick="window.location.href='#'">
+        <img src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=800&q=85" alt="Hvar otok vodič luksuz" loading="lazy" width="800" height="533">
+        <div class="dest-card-overlay"></div>
+        <div class="dest-card-content">
+          <div class="dest-card-tag">Destinacijski vodič · 10 min</div>
+          <h3 class="dest-card-title">Hvar — što raditi kad ste vidjeli sve beach clubove</h3>
+          <div class="dest-card-meta">Skrivene plaže · Vinarije · Lavandina polja · Lokalni restorani</div>
+        </div>
+      </article>
+      <article class="dest-card" data-dest="dubrovnik" onclick="window.location.href='#'">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Dubrovnik stari grad zidine" loading="lazy" width="800" height="533">
+        <div class="dest-card-overlay"></div>
+        <div class="dest-card-content">
+          <div class="dest-card-tag">Destinacijski vodič · 9 min</div>
+          <h3 class="dest-card-title">Dubrovnik izvan sezone — zašto je rujanj savršen</h3>
+          <div class="dest-card-meta">Bez gužvi · Niže cijene · Toplo more · Lokalna atmosfera</div>
+        </div>
+      </article>
+      <article class="dest-card" data-dest="peljesac" onclick="window.location.href='#'">
+        <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=800&q=85" alt="Pelješac vinarije more" loading="lazy" width="800" height="533">
+        <div class="dest-card-overlay"></div>
+        <div class="dest-card-content">
+          <div class="dest-card-tag">Destinacijski vodič · 7 min</div>
+          <h3 class="dest-card-title">Pelješac — Hrvatska najljepša vinska cesta</h3>
+          <div class="dest-card-meta">Plavac Mali · Stonske kamenice · Privatne vinarije · Sunset viewing</div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <div class="nl-content">
+      <div class="nl-eyebrow">✦ CPS Moments Newsletter</div>
+      <h3 class="nl-title">Primite 5 tajnih lokalnih tips<br>za vašu destinaciju.</h3>
+      <p class="nl-sub">Odaberite destinaciju — pošaljemo vam naš interni vodič koji ne objavljujemo nigdje drugdje. Besplatno.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:10px; flex-shrink:0;">
+      <select style="font-family:'Jost',sans-serif; font-size:13px; color:var(--text); border:1px solid var(--border-warm); border-radius:6px; padding:12px 18px; background:white; outline:none; cursor:pointer;">
+        <option>Odaberite destinaciju...</option>
+        <option>Split & okolica</option>
+        <option>Dubrovnik & Elafiti</option>
+        <option>Hvar & Pakleni otoci</option>
+        <option>Pelješac & Korčula</option>
+        <option>Brač & Zlatni Rat</option>
+        <option>Cijela Dalmacija</option>
+      </select>
+      <div class="nl-form">
+        <input class="nl-input" type="email" placeholder="Vaša email adresa">
+        <button class="nl-btn">Pošaljite mi tips →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button class="pg-btn" style="opacity:0.35;">‹</button>
+    <button class="pg-btn on">1</button>
+    <button class="pg-btn">2</button>
+    <button class="pg-btn">3</button>
+    <button class="pg-btn">›</button>
+  </div>
+
+</main>
+
+<script>
+// ACCORDION
+function toggleAcc(btn) {
+  const item = btn.closest('.acc-item');
+  const isOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('open'));
+  // Open clicked if was closed
+  if (!isOpen) item.classList.add('open');
+}
+
+// HAMBURGER
+function toggleMenu() {
+  const h = document.getElementById('hamburger');
+  const d = document.getElementById('mobileDrawer');
+  h.classList.toggle('open');
+  d.classList.toggle('open');
+  document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+}
+
+// LANG
+function setLang(btn, lang) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+}
+
+// TYPE FILTER
+let activeType = 'sve';
+let activeDest = 'sve';
+let searchQuery = '';
+
+function filterType(el, type) {
+  document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('on'));
+  el.classList.add('on');
+  activeType = type;
+  applyFilters();
+  updateFilterTags();
+}
+
+function filterDest(val) {
+  activeDest = val;
+  applyFilters();
+  updateFilterTags();
+}
+
+function filterSearch(val) {
+  searchQuery = val.toLowerCase();
+  applyFilters();
+}
+
+function applyFilters() {
+  const cards = document.querySelectorAll('.story-card');
+  let count = 0;
+  cards.forEach(card => {
+    const matchType = activeType === 'sve' || card.dataset.type === activeType;
+    const matchDest = activeDest === 'sve' || card.dataset.dest === activeDest;
+    const title = card.querySelector('.sc-title')?.textContent.toLowerCase() || '';
+    const excerpt = card.querySelector('.sc-excerpt')?.textContent.toLowerCase() || '';
+    const matchSearch = !searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery);
+    if (matchType && matchDest && matchSearch) {
+      card.style.display = '';
+      count++;
+      card.style.opacity = '0'; card.style.transform = 'translateY(16px)';
+      setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; card.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; }, 50);
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  document.getElementById('story-count').textContent = count;
+
+  // Show/hide tips
+  if (activeType === 'tips') {
+    document.getElementById('tipsSection').style.display = 'block';
+    document.getElementById('destSection').style.display = 'none';
+  } else if (activeType === 'destinacija') {
+    document.getElementById('tipsSection').style.display = 'none';
+    document.getElementById('destSection').style.display = 'block';
+  } else {
+    document.getElementById('tipsSection').style.display = 'block';
+    document.getElementById('destSection').style.display = 'block';
+  }
+}
+
+function updateFilterTags() {
+  const bar = document.getElementById('activeFilters');
+  const container = document.getElementById('filterTags');
+  container.innerHTML = '';
+  const tags = [];
+  if (activeType !== 'sve') tags.push({ label: activeType.charAt(0).toUpperCase() + activeType.slice(1), type: 'type' });
+  if (activeDest !== 'sve') tags.push({ label: document.getElementById('destSelect').options[document.getElementById('destSelect').selectedIndex].text, type: 'dest' });
+  if (tags.length > 0) {
+    bar.classList.remove('hidden');
+    tags.forEach(t => {
+      const tag = document.createElement('div');
+      tag.className = 'af-tag';
+      tag.innerHTML = `${t.label} <button class="af-remove" onclick="removeFilter('${t.type}')">×</button>`;
+      container.appendChild(tag);
+    });
+  } else {
+    bar.classList.add('hidden');
+  }
+}
+
+function removeFilter(type) {
+  if (type === 'type') { activeType = 'sve'; document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('on')); document.querySelector('.type-tab:first-child').classList.add('on'); }
+  else { activeDest = 'sve'; document.getElementById('destSelect').value = 'sve'; }
+  applyFilters(); updateFilterTags();
+}
+
+function clearFilters() {
+  activeType = 'sve'; activeDest = 'sve'; searchQuery = '';
+  document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('on'));
+  document.querySelector('.type-tab:first-child').classList.add('on');
+  document.getElementById('destSelect').value = 'sve';
+  document.getElementById('searchInput').value = '';
+  applyFilters(); updateFilterTags();
+}
+
+// TIPS FILTER
+function filterTips(el, dest) {
+  document.querySelectorAll('.tips-dest-btn').forEach(b => b.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.tip-card').forEach(card => {
+    card.style.display = dest === 'sve' || card.dataset.dest === dest ? '' : 'none';
+  });
+}
+
+// DEST STORIES FILTER
+function filterDestStories(el, dest) {
+  document.querySelectorAll('.dest-tab').forEach(t => t.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.dest-card').forEach(card => {
+    card.style.display = dest === 'sve' || card.dataset.dest === dest ? '' : 'none';
+  });
+}
+
+// SCROLL REVEAL
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.story-card').forEach(c => {
+  c.style.transition = 'opacity 0.55s ease, transform 0.55s ease, box-shadow 0.3s, border-color 0.2s';
+  obs.observe(c);
+});
+
+// WISHLIST
+function updateWishlistCount() {
+  try {
+    const favs = JSON.parse(localStorage.getItem('lcr_favs') || '[]').filter(f => f.expires > Date.now());
+    const el = document.getElementById('wishlist-count');
+    if (el) { el.textContent = favs.length; el.classList.toggle('show', favs.length > 0); }
+  } catch(e) {}
+}
+document.addEventListener('DOMContentLoaded', updateWishlistCount);
+
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+</script>
+</body>
+</html>

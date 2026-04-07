@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique & Heritage Hoteli u Hrvatskoj – Jedinstveni Smještaj | Croatia Premium Stay</title>
+<meta name="description" content="Pažljivo odabrani boutique i heritage hoteli u Hrvatskoj. Palače, kašteli, design hoteli — direktna rezervacija, bez posrednika. Split, Dubrovnik, Hvar, Istra.">
+<link rel="canonical" href="https://croatiapremiustay.com/hr/hoteli/">
+<link rel="alternate" hreflang="hr" href="https://croatiapremiustay.com/hr/hoteli/">
+<link rel="alternate" hreflang="en" href="https://croatiapremiustay.com/en/hotels/">
+<link rel="alternate" hreflang="de" href="https://croatiapremiustay.com/de/hotels/">
+<meta name="theme-color" content="#115571">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Boutique & Heritage Hoteli u Hrvatskoj",
+  "description": "Pažljivo odabrani boutique i heritage hoteli u Hrvatskoj — palače, kašteli, design hoteli.",
+  "url": "https://croatiapremiustay.com/hr/hoteli/",
+  "provider": {"@type": "Organization", "name": "Croatia Premium Stay"}
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0A2535; --teal: #115571; --teal-pale: #E8F4F8; --teal-pale2: #D0E8F0;
+  --gold: #C4974E; --gold-pale: #FDF6E8; --gold-warm: #F0E8D5;
+  --white: #fff; --cream: #F7F5F1; --off-white: #FAFAFA;
+  --border: #E2EEF2; --border-dark: #C8DDE4;
+  --text: #0F1E24; --text-light: #5A7880; --text-muted: #8AA8B0;
+  --shadow-sm: 0 1px 12px rgba(10,37,53,0.06);
+  --shadow: 0 4px 24px rgba(10,37,53,0.10);
+  --shadow-lg: 0 12px 48px rgba(10,37,53,0.14);
+}
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: white; color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 200; height: 64px; background: rgba(255,255,255,0.97); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 400;
+  color: var(--teal); letter-spacing: 0.06em;
+  text-decoration: none; flex-shrink: 0;
+  display: flex; align-items: baseline; gap: 5px;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.75; }
+.nav-logo-premium {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: none; padding: 6px; flex-shrink: 0; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--teal); border-radius: 2px; transition: all 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-wishlist { font-size: 16px; color: var(--text-light); cursor: pointer; background: transparent; border: none; padding: 6px 10px; border-radius: 6px; transition: color 0.2s; flex-shrink: 0; position: relative; }
+.nav-wishlist:hover { color: var(--teal); }
+.mobile-drawer { display: flex; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: white; z-index: 199; padding: 28px 24px; flex-direction: column; transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94); overflow-y: auto; }
+.mobile-drawer.open { transform: translateX(0); }
+.mob-link { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--border); display: block; }
+.mob-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+.mob-lang { display: flex; gap: 8px; }
+.mob-lang button { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-light); background: white; cursor: pointer; }
+.mob-lang button.on { background: var(--teal); color: white; border-color: var(--teal); }
+.mob-btn { width: 100%; padding: 14px; border-radius: 6px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border: none; }
+.mob-btn-ghost { background: transparent; border: 1px solid var(--border-dark); color: var(--text-light); }
+.mob-btn-solid { background: var(--teal); color: white; }
+
+/* PAGE HEADER */
+.page-header { background: var(--navy); padding: 56px 56px 0; position: relative; overflow: hidden; }
+.page-header::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1555990793-da11153b2473?w=1600&q=40') center/cover; opacity: 0.1; }
+.ph-inner { position: relative; z-index: 1; max-width: 700px; }
+.ph-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.42em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.ph-eyebrow::before { content: ''; width: 16px; height: 1px; background: rgba(255,255,255,0.3); }
+.ph-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 300; color: white; line-height: 1.1; margin-bottom: 10px; }
+.ph-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+.ph-sub { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.55); margin-bottom: 36px; line-height: 1.7; }
+
+/* FILTER BAR */
+.filter-bar { background: white; border-bottom: 1px solid var(--border); padding: 0 40px; position: sticky; top: 64px; z-index: 100; box-shadow: var(--shadow-sm); }
+.filter-bar-inner { display: flex; align-items: stretch; height: 58px; overflow-x: auto; scrollbar-width: none; }
+.filter-bar-inner::-webkit-scrollbar { display: none; }
+
+/* TYPE TABS */
+.type-tab { display: flex; align-items: center; gap: 7px; padding: 0 22px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-light); cursor: pointer; border: none; background: transparent; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; flex-shrink: 0; }
+.type-tab:hover { color: var(--teal); }
+.type-tab.on { color: var(--teal); border-bottom-color: var(--teal); font-weight: 500; }
+
+/* DEST SELECT */
+.dest-wrap { display: flex; align-items: center; gap: 10px; padding: 0 22px; border-left: 1px solid var(--border); flex-shrink: 0; margin-left: auto; }
+.dest-label { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); white-space: nowrap; }
+.dest-select { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--text); border: none; outline: none; background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238AA8B0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 0 center; padding-right: 18px; cursor: pointer; appearance: none; }
+
+/* BREADCRUMB */
+.breadcrumb { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 11px 40px; font-family: 'Jost', sans-serif; font-size: 11px; color: var(--text-muted); display: flex; gap: 8px; align-items: center; }
+.breadcrumb a { color: var(--text-light); transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb .sep { color: var(--border-dark); }
+.breadcrumb .curr { color: var(--teal); font-weight: 400; }
+
+/* MAIN */
+.main { padding: 40px 40px; background: white; }
+
+/* SEO SECTION */
+.seo-section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+.seo-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.38em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.seo-eyebrow::before { content: ''; width: 14px; height: 1px; background: var(--teal); }
+.seo-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; color: var(--text); line-height: 1.1; margin-bottom: 10px; }
+.seo-h1 em { font-style: italic; color: var(--teal); }
+.seo-text { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-light); line-height: 1.85; max-width: 640px; }
+.seo-note { background: var(--gold-warm); border: 1px solid #DDD0B8; border-radius: 8px; padding: 14px 18px; margin-top: 16px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: #8A6820; line-height: 1.6; display: flex; gap: 10px; align-items: flex-start; }
+
+/* RESULTS HEADER */
+.results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
+.results-count { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; color: var(--text-light); }
+.results-count strong { font-weight: 500; color: var(--text); }
+.sort-wrap { display: flex; align-items: center; gap: 8px; }
+.sort-lbl { font-family: 'Jost', sans-serif; font-size: 11px; color: var(--text-muted); }
+.sort-select { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 8px 28px 8px 12px; background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238AA8B0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 10px center; cursor: pointer; outline: none; appearance: none; }
+
+/* HOTEL GRID */
+.hotel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* HOTEL CARD */
+.hotel-card {
+  background: white; border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden; cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.35s, border-color 0.2s;
+  opacity: 0; transform: translateY(20px);
+}
+.hotel-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.35s, border-color 0.2s; }
+.hotel-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--border-dark); }
+
+.hc-img { height: 240px; position: relative; overflow: hidden; }
+.hc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+.hotel-card:hover .hc-img img { transform: scale(1.06); }
+
+.hc-badge { position: absolute; top: 14px; left: 14px; font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 11px; border-radius: 20px; z-index: 1; }
+.hcb-gold { background: var(--gold); color: white; }
+.hcb-navy { background: var(--navy); color: white; }
+.hcb-teal { background: var(--teal); color: white; }
+
+.hc-fav { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; background: rgba(255,255,255,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; cursor: pointer; z-index: 1; border: none; transition: transform 0.2s; }
+.hc-fav:hover { transform: scale(1.12); }
+.hc-fav.saved { color: #E24B4A; }
+
+.hc-rooms { position: absolute; bottom: 12px; left: 14px; background: rgba(255,255,255,0.95); border-radius: 20px; padding: 4px 11px; font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; color: var(--text); z-index: 1; }
+
+.hc-body { padding: 18px 20px 20px; }
+.hc-type { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.hc-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text); margin-bottom: 5px; line-height: 1.2; }
+.hc-loc { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300; color: var(--text-muted); margin-bottom: 12px; }
+.hc-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.hc-tag { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 300; padding: 3px 10px; border-radius: 20px; background: var(--cream); border: 1px solid var(--border); color: var(--text-light); }
+.hc-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--border); gap: 10px; }
+.hc-price { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--text-light); }
+.hc-price strong { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--teal); }
+.hc-btn { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 9px 14px; border-radius: 6px; background: var(--teal); color: white; border: none; cursor: pointer; white-space: nowrap; transition: background 0.2s; flex-shrink: 0; }
+.hc-btn:hover { background: var(--navy); }
+.hc-rating { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--text-light); display: flex; align-items: center; gap: 4px; }
+.star { color: #F4A92A; }
+
+/* ACTIVE FILTERS */
+.active-filters { padding: 10px 40px; background: white; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.active-filters.hidden { display: none; }
+.af-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--teal-pale); border: 1px solid var(--teal-pale2); border-radius: 20px; padding: 5px 12px; font-family: 'Jost', sans-serif; font-size: 11px; color: var(--teal); }
+.af-remove { cursor: pointer; font-size: 14px; color: var(--text-muted); background: none; border: none; padding: 0; line-height: 1; }
+.af-clear { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; color: var(--text-muted); cursor: pointer; background: none; border: none; margin-left: auto; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* PAGINATION */
+.pagination { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+.pg-btn { width: 40px; height: 40px; border-radius: 6px; border: 1px solid var(--border); background: white; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--text-light); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.pg-btn:hover { border-color: var(--teal); color: var(--teal); }
+.pg-btn.on { background: var(--teal); color: white; border-color: var(--teal); font-weight: 500; }
+
+/* PARTNER CTA */
+.partner-cta { background: var(--navy); border-radius: 10px; padding: 40px 48px; margin-top: 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.pc-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: white; margin-bottom: 8px; }
+.pc-title em { font-style: italic; color: rgba(255,255,255,0.5); }
+.pc-sub { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.pc-btn { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px 28px; border-radius: 6px; background: var(--gold); color: white; border: none; cursor: pointer; white-space: nowrap; transition: all 0.25s; flex-shrink: 0; }
+.pc-btn:hover { background: white; color: var(--navy); }
+
+/* MOBILE */
+@media (max-width: 1100px) {
+  html { font-size: 17px; }
+  nav { padding: 0 20px; }
+  .page-header { padding: 36px 20px 0; }
+  .filter-bar { padding: 0; top: 64px; }
+  .filter-bar-inner { padding: 0 16px; }
+  .active-filters { padding: 10px 20px; }
+  .breadcrumb { padding: 10px 20px; }
+  .main { padding: 24px 20px; }
+  .seo-section { flex-direction: column; }
+  .hotel-grid { grid-template-columns: 1fr; }
+  .partner-cta { flex-direction: column; gap: 20px; }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+  .hotel-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <a href="index.html" class="nav-logo">
+    Croatia <span class="nav-logo-premium">premium</span> Stay
+  </a>
+  <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+    <a href="owner-dashboard.html" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:inherit;text-decoration:none;padding:8px 16px;border:1px solid rgba(128,128,128,0.3);border-radius:6px;transition:all 0.2s;white-space:nowrap;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">Prijava</a>
+    <a href="owner-add-property.html" style="font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:white;text-decoration:none;padding:8px 18px;background:var(--teal);border-radius:6px;transition:all 0.2s;white-space:nowrap;" onmouseover="this.style.background='var(--navy)'" onmouseout="this.style.background='var(--teal)'">Oglasite objekt</a>
+  </div>
+  <button class="nav-wishlist" onclick="window.location.href='wishlist.html'">♡</button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html" class="mob-link" onclick="toggleMenu()">Početna</a>
+  <a href="vile.html" class="mob-link" onclick="toggleMenu()">Vile & Apartmani</a>
+  <a href="iskustva.html" class="mob-link" onclick="toggleMenu()">Iskustva</a>
+  <a href="hoteli.html" class="mob-link" onclick="toggleMenu()">Boutique Hoteli</a>
+  <a href="moments.html" class="mob-link" onclick="toggleMenu()">CPS Moments</a>
+  <a href="o-nama.html" class="mob-link" onclick="toggleMenu()">O nama</a>
+  <div class="mob-actions">
+    <div class="mob-lang">
+      <button class="on">HR</button>
+      <button>EN</button>
+      <button>DE</button>
+    </div>
+    <button class="mob-btn mob-btn-ghost" onclick="window.location.href='owner-dashboard.html'">Prijava</button>
+    <button class="mob-btn mob-btn-solid" onclick="window.location.href='owner-add-property.html'">Oglasite objekt</button>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-inner">
+    <p class="ph-eyebrow">Jedinstven smještaj · Ne Booking.com</p>
+    <h2 class="ph-title">Boutique & Heritage<br><em>hoteli.</em></h2>
+    <p class="ph-sub">Palače, kašteli, design hoteli — pažljivo odabrani. Direktna rezervacija bez posrednika. Maksimalno 30 soba. Samo karakter.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <button class="type-tab on" onclick="filterType(this,'sve')">✦ Sve</button>
+    <button class="type-tab" onclick="filterType(this,'heritage')">🏛️ Heritage</button>
+    <button class="type-tab" onclick="filterType(this,'boutique')">🌿 Boutique</button>
+    <button class="type-tab" onclick="filterType(this,'design')">✦ Design</button>
+    <button class="type-tab" onclick="filterType(this,'adults')">🔞 Adults only</button>
+    <button class="type-tab" onclick="filterType(this,'agroturizam')">🍃 Agroturizam</button>
+    <div class="dest-wrap">
+      <span class="dest-label">Destinacija</span>
+      <select class="dest-select" id="destSelect" onchange="filterDest(this.value)">
+        <option value="sve">Sve destinacije</option>
+        <option value="split">Split</option>
+        <option value="dubrovnik">Dubrovnik</option>
+        <option value="hvar">Hvar</option>
+        <option value="istra">Istra</option>
+        <option value="peljesac">Pelješac</option>
+        <option value="korcula">Korčula</option>
+        <option value="zadar">Zadar</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVE FILTERS -->
+<div class="active-filters hidden" id="activeFilters">
+  <div id="filterTags" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+  <button class="af-clear" onclick="clearFilters()">Ukloni sve ×</button>
+</div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb">
+  <a href="index.html">Početna</a><span class="sep">›</span>
+  <span class="curr" id="breadcrumb-curr">Boutique & Heritage hoteli</span>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- SEO -->
+  <div class="seo-section">
+    <div>
+      <p class="seo-eyebrow" id="seo-eyebrow">Hrvatska · Dalmacija · Istra · Kvarner</p>
+      <h1 class="seo-h1" id="seo-h1">Boutique & Heritage hoteli<br><em>u Hrvatskoj.</em></h1>
+      <p class="seo-text" id="seo-text">Nismo Booking.com. Ne prikazujemo svaki hotel — prikazujemo samo one koji imaju karakter, priču i standard koji odgovara gostima koji znaju razliku. Palače, renovirani kašteli, design hoteli s dušom.</p>
+      <div class="seo-note">
+        <span>🤝</span>
+        <span>Svaki hotel rezervirate <strong>direktno</strong> — bez naše provizije, bez Booking.com naknade. Direktno s hotelom.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS HEADER -->
+  <div class="results-header">
+    <div class="results-count">
+      Prikazuje se <strong id="showing">6</strong> hotela
+    </div>
+    <div class="sort-wrap">
+      <span class="sort-lbl">Sortiraj:</span>
+      <select class="sort-select">
+        <option>Preporučeno</option>
+        <option>Ocjena</option>
+        <option>Cijena ↑</option>
+        <option>Cijena ↓</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- HOTEL GRID -->
+  <div class="hotel-grid" id="hotelGrid">
+
+    <!-- 1 — VESTIBUL PALACE -->
+    <article class="hotel-card" data-type="heritage" data-dest="split"
+             itemscope itemtype="https://schema.org/Hotel"
+             onclick="window.location.href='hotel.html'">
+      <div class="hc-img">
+        <img src="https://images.unsplash.com/photo-1555990793-da11153b2473?w=700&q=85"
+             alt="Hotel Vestibul Palace Split unutar Dioklecijanove palače heritage boutique"
+             width="700" height="467" loading="lazy" itemprop="image">
+        <span class="hc-badge hcb-gold">Featured</span>
+        <button class="hc-fav" onclick="event.stopPropagation(); this.classList.toggle('saved'); this.textContent = this.classList.contains('saved') ? '♥' : '♡'" aria-label="Spremi">♡</button>
+        <span class="hc-rooms">7 soba · Adults only</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-type">🏛️ Heritage · Split</div>
+        <h3 class="hc-name" itemprop="name">Hotel Vestibul Palace</h3>
+        <p class="hc-loc" itemprop="address">📍 Unutar Dioklecijanove palače · Split</p>
+        <div class="hc-tags">
+          <span class="hc-tag">★★★★★</span>
+          <span class="hc-tag">UNESCO lokacija</span>
+          <span class="hc-tag">Adults only</span>
+          <span class="hc-tag">4. stoljeće</span>
+        </div>
+        <div class="hc-footer">
+          <div>
+            <div class="hc-price">Od <strong>350€</strong> /noć</div>
+            <div class="hc-rating"><span class="star">★</span> 4.9 (124)</div>
+          </div>
+          <button class="hc-btn" onclick="event.stopPropagation(); window.open('https://www.vestibulpalace.com','_blank')">
+            Rezervirajte →
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 — PUCIC PALACE -->
+    <article class="hotel-card" data-type="heritage" data-dest="dubrovnik"
+             itemscope itemtype="https://schema.org/Hotel"
+             onclick="window.location.href='hotel.html'">
+      <div class="hc-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"
+             alt="Pucić Palace Dubrovnik stari grad palača boutique hotel heritage"
+             width="700" height="467" loading="lazy" itemprop="image">
+        <span class="hc-badge hcb-navy">Top pick</span>
+        <button class="hc-fav" onclick="event.stopPropagation(); this.classList.toggle('saved'); this.textContent = this.classList.contains('saved') ? '♥' : '♡'" aria-label="Spremi">♡</button>
+        <span class="hc-rooms">17 soba</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-type">🏛️ Heritage · Dubrovnik</div>
+        <h3 class="hc-name" itemprop="name">Pucić Palace</h3>
+        <p class="hc-loc" itemprop="address">📍 Stara jezgra · Dubrovnik</p>
+        <div class="hc-tags">
+          <span class="hc-tag">★★★★★</span>
+          <span class="hc-tag">16. stoljeće</span>
+          <span class="hc-tag">UNESCO</span>
+          <span class="hc-tag">Stari grad</span>
+        </div>
+        <div class="hc-footer">
+          <div>
+            <div class="hc-price">Od <strong>480€</strong> /noć</div>
+            <div class="hc-rating"><span class="star">★</span> 4.9 (218)</div>
+          </div>
+          <button class="hc-btn" onclick="event.stopPropagation(); window.open('https://www.thepucicpalace.com','_blank')">
+            Rezervirajte →
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 — DESIGN HOTEL HVAR -->
+    <article class="hotel-card" data-type="design adults" data-dest="hvar"
+             itemscope itemtype="https://schema.org/Hotel"
+             onclick="window.location.href='hotel.html'">
+      <div class="hc-img">
+        <img src="https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=700&q=85"
+             alt="Design boutique hotel Hvar adults only luksuz more"
+             width="700" height="467" loading="lazy" itemprop="image">
+        <span class="hc-badge hcb-teal">LCR Verified</span>
+        <button class="hc-fav" onclick="event.stopPropagation(); this.classList.toggle('saved'); this.textContent = this.classList.contains('saved') ? '♥' : '♡'" aria-label="Spremi">♡</button>
+        <span class="hc-rooms">12 soba · Adults only</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-type">✦ Design · Hvar</div>
+        <h3 class="hc-name" itemprop="name">Villa Nora Hvar</h3>
+        <p class="hc-loc" itemprop="address">📍 Hvar grad · Sea view</p>
+        <div class="hc-tags">
+          <span class="hc-tag">★★★★★</span>
+          <span class="hc-tag">Adults only</span>
+          <span class="hc-tag">Infinity pool</span>
+          <span class="hc-tag">Sea view</span>
+        </div>
+        <div class="hc-footer">
+          <div>
+            <div class="hc-price">Od <strong>320€</strong> /noć</div>
+            <div class="hc-rating"><span class="star">★</span> 4.8 (89)</div>
+          </div>
+          <button class="hc-btn" onclick="event.stopPropagation(); window.open('https://www.villanora.eu','_blank')">
+            Rezervirajte →
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 — AGROTURIZAM ISTRA -->
+    <article class="hotel-card" data-type="agroturizam boutique" data-dest="istra"
+             itemscope itemtype="https://schema.org/Hotel"
+             onclick="window.location.href='hotel.html'">
+      <div class="hc-img">
+        <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=700&q=85"
+             alt="Agroturizam Istra kamena kuća boutique smještaj Hrvatska"
+             width="700" height="467" loading="lazy" itemprop="image">
+        <span class="hc-badge hcb-gold">Featured</span>
+        <button class="hc-fav" onclick="event.stopPropagation(); this.classList.toggle('saved'); this.textContent = this.classList.contains('saved') ? '♥' : '♡'" aria-label="Spremi">♡</button>
+        <span class="hc-rooms">8 soba · Privatno</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-type">🍃 Agroturizam · Istra</div>
+        <h3 class="hc-name" itemprop="name">Stancija Kovačići</h3>
+        <p class="hc-loc" itemprop="address">📍 Središnja Istra · Vinogradi</p>
+        <div class="hc-tags">
+          <span class="hc-tag">★★★★★</span>
+          <span class="hc-tag">Kamena kuća</span>
+          <span class="hc-tag">Vlastito vino</span>
+          <span class="hc-tag">Mirno</span>
+        </div>
+        <div class="hc-footer">
+          <div>
+            <div class="hc-price">Od <strong>180€</strong> /noć</div>
+            <div class="hc-rating"><span class="star">★</span> 4.9 (67)</div>
+          </div>
+          <button class="hc-btn" onclick="event.stopPropagation();">
+            Kontaktirajte →
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 — BOUTIQUE KORČULA -->
+    <article class="hotel-card" data-type="boutique heritage" data-dest="korcula"
+             itemscope itemtype="https://schema.org/Hotel"
+             onclick="window.location.href='hotel.html'">
+      <div class="hc-img">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=85"
+             alt="Boutique hotel Korčula stari grad more luksuz"
+             width="700" height="467" loading="lazy" itemprop="image">
+        <span class="hc-badge hcb-teal">LCR Verified</span>
+        <button class="hc-fav" onclick="event.stopPropagation(); this.classList.toggle('saved'); this.textContent = this.classList.contains('saved') ? '♥' : '♡'" aria-label="Spremi">♡</button>
+        <span class="hc-rooms">10 soba</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-type">🌿 Boutique · Korčula</div>
+        <h3 class="hc-name" itemprop="name">Lešić Dimitri Palace</h3>
+        <p class="hc-loc" itemprop="address">📍 Stari grad Korčula · More</p>
+        <div class="hc-tags">
+          <span class="hc-tag">★★★★★</span>
+          <span class="hc-tag">Heritage</span>
+          <span class="hc-tag">Restoran</span>
+          <span class="hc-tag">Sea view</span>
+        </div>
+        <div class="hc-footer">
+          <div>
+            <div class="hc-price">Od <strong>420€</strong> /noć</div>
+            <div class="hc-rating"><span class="star">★</span> 4.9 (156)</div>
+          </div>
+          <button class="hc-btn" onclick="event.stopPropagation(); window.open('https://www.lesic-dimitri.com','_blank')">
+            Rezervirajte →
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 — DESIGN ZADAR -->
+    <article class="hotel-card" data-type="design boutique" data-dest="zadar"
+             itemscope itemtype="https://schema.org/Hotel"
+             onclick="window.location.href='hotel.html'">
+      <div class="hc-img">
+        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=85"
+             alt="Design boutique hotel Zadar more luksuz moderna arhitektura"
+             width="700" height="467" loading="lazy" itemprop="image">
+        <span class="hc-badge hcb-navy">Top pick</span>
+        <button class="hc-fav" onclick="event.stopPropagation(); this.classList.toggle('saved'); this.textContent = this.classList.contains('saved') ? '♥' : '♡'" aria-label="Spremi">♡</button>
+        <span class="hc-rooms">14 soba</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-type">✦ Design · Zadar</div>
+        <h3 class="hc-name" itemprop="name">Art Hotel Kalelarga</h3>
+        <p class="hc-loc" itemprop="address">📍 Kalelarga, Zadar · Stari grad</p>
+        <div class="hc-tags">
+          <span class="hc-tag">★★★★★</span>
+          <span class="hc-tag">Art design</span>
+          <span class="hc-tag">Stari grad</span>
+          <span class="hc-tag">Restoran</span>
+        </div>
+        <div class="hc-footer">
+          <div>
+            <div class="hc-price">Od <strong>220€</strong> /noć</div>
+            <div class="hc-rating"><span class="star">★</span> 4.8 (143)</div>
+          </div>
+          <button class="hc-btn" onclick="event.stopPropagation(); window.open('https://www.arthotel-kalelarga.com','_blank')">
+            Rezervirajte →
+          </button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button class="pg-btn" style="opacity:0.35;">‹</button>
+    <button class="pg-btn on">1</button>
+    <button class="pg-btn">2</button>
+    <button class="pg-btn">›</button>
+  </div>
+
+  <!-- PARTNER CTA -->
+  <div class="partner-cta">
+    <div>
+      <h3 class="pc-title">Imate boutique hotel<br><em>s karakterom?</em></h3>
+      <p class="pc-sub">Ne tražimo svaki hotel — tražimo one s pričom. Ako imate max 30 soba i nešto što vas čini jedinstvenim — razgovarajmo.</p>
+    </div>
+    <button class="pc-btn" onclick="window.location.href='mailto:hoteli@croatiapremiustay.com'">
+      Predložite vaš hotel →
+    </button>
+  </div>
+
+</main>
+
+<script>
+// HAMBURGER
+function toggleMenu() {
+  const h = document.getElementById('hamburger');
+  const d = document.getElementById('mobileDrawer');
+  h.classList.toggle('open');
+  d.classList.toggle('open');
+  document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+}
+
+// FILTERS
+let activeType = 'sve';
+let activeDest = 'sve';
+
+function filterType(el, type) {
+  document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('on'));
+  el.classList.add('on');
+  activeType = type;
+  applyFilters();
+  updateTags();
+}
+
+function filterDest(val) {
+  activeDest = val;
+  applyFilters();
+  updateTags();
+  updateSEO(val);
+}
+
+function applyFilters() {
+  const cards = document.querySelectorAll('.hotel-card');
+  let count = 0;
+  cards.forEach(card => {
+    const matchType = activeType === 'sve' || card.dataset.type?.includes(activeType);
+    const matchDest = activeDest === 'sve' || card.dataset.dest === activeDest;
+    if (matchType && matchDest) {
+      card.style.display = '';
+      count++;
+      card.style.opacity = '0'; card.style.transform = 'translateY(16px)';
+      setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; card.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; }, 50);
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  document.getElementById('showing').textContent = count;
+}
+
+function updateTags() {
+  const bar = document.getElementById('activeFilters');
+  const container = document.getElementById('filterTags');
+  container.innerHTML = '';
+  const tags = [];
+  if (activeType !== 'sve') tags.push({ label: activeType.charAt(0).toUpperCase() + activeType.slice(1), type: 'type' });
+  if (activeDest !== 'sve') tags.push({ label: document.getElementById('destSelect').options[document.getElementById('destSelect').selectedIndex].text, type: 'dest' });
+  if (tags.length > 0) {
+    bar.classList.remove('hidden');
+    tags.forEach(t => {
+      const tag = document.createElement('div');
+      tag.className = 'af-tag';
+      tag.innerHTML = `${t.label} <button class="af-remove" onclick="removeFilter('${t.type}')">×</button>`;
+      container.appendChild(tag);
+    });
+  } else {
+    bar.classList.add('hidden');
+  }
+}
+
+function removeFilter(type) {
+  if (type === 'type') { activeType = 'sve'; document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('on')); document.querySelector('.type-tab:first-child').classList.add('on'); }
+  else { activeDest = 'sve'; document.getElementById('destSelect').value = 'sve'; }
+  applyFilters(); updateTags();
+}
+
+function clearFilters() {
+  activeType = 'sve'; activeDest = 'sve';
+  document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('on'));
+  document.querySelector('.type-tab:first-child').classList.add('on');
+  document.getElementById('destSelect').value = 'sve';
+  applyFilters(); updateTags();
+}
+
+// SEO UPDATE
+const seoData = {
+  split: { eyebrow: 'Split · Dalmacija', h1: 'Boutique & Heritage hoteli <em>u Splitu.</em>', text: 'Smještaj unutar Dioklecijanove palače, u srcu staroga grada. Hoteli koji imaju povijest, karakter i standard koji se ne nalazi na Booking.comu.' },
+  dubrovnik: { eyebrow: 'Dubrovnik · Dalmacija', h1: 'Boutique & Heritage hoteli <em>u Dubrovniku.</em>', text: 'Palače iz 16. stoljeća u UNESCO jezgri, design hoteli s pogledom na zidine. Dubrovnik rezervirajte tamo gdje lokalni znaju.' },
+  hvar: { eyebrow: 'Hvar · Dalmacija', h1: 'Boutique & Heritage hoteli <em>na Hvaru.</em>', text: 'Adults only design hoteli s infinity bazenom i pogledom na Paklene otoke. Hvar kakav zaslužujete.' },
+  istra: { eyebrow: 'Istra · Hrvatska', h1: 'Boutique & Agroturizam hoteli <em>u Istri.</em>', text: 'Renovirane kamene kuće usred vinograda i maslinika. Istra koja miriše na tartufe, vlastito vino i tišinu.' },
+  sve: { eyebrow: 'Hrvatska · Dalmacija · Istra · Kvarner', h1: 'Boutique & Heritage hoteli <em>u Hrvatskoj.</em>', text: 'Nismo Booking.com. Prikazujemo samo hotele koji imaju karakter, priču i standard koji odgovara gostima koji znaju razliku.' }
+};
+
+function updateSEO(dest) {
+  const d = seoData[dest] || seoData['sve'];
+  document.getElementById('seo-eyebrow').textContent = d.eyebrow;
+  document.getElementById('seo-h1').innerHTML = d.h1;
+  document.getElementById('seo-text').textContent = d.text;
+  document.getElementById('breadcrumb-curr').textContent = dest === 'sve' ? 'Boutique & Heritage hoteli' : 'Hoteli · ' + document.getElementById('destSelect').options[document.getElementById('destSelect').selectedIndex].text;
+}
+
+// SCROLL REVEAL
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.hotel-card').forEach(c => obs.observe(c));
+
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+</script>
+</body>
+</html>
